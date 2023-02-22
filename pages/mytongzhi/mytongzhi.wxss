@@ -1,0 +1,159 @@
+.link-wrap,page {
+    background: #f4f4f4;
+}
+
+.slide-title {
+    white-space: nowrap;
+}
+
+.link-wrap {
+    border-bottom: 1rpx solid #f6f6f6;
+    height: 168rpx;
+    overflow-x: hidden;
+    padding: 30rpx 0 30rpx 20rpx;
+    width: 720rpx;
+}
+
+.top_img_box {
+    height: 112rpx;
+    margin: 10rpx auto;
+    width: 112rpx;
+}
+
+.action-item {
+    display: inline-block;
+    height: 168rpx;
+    margin-left: 20rpx;
+    position: relative;
+    text-align: center;
+    width: 225rpx;
+}
+
+.action-item:first-child {
+    margin-left: 0;
+}
+
+.action-item image {
+    border-radius: 8rpx;
+    height: 100%;
+    width: 100%;
+}
+
+.action-item view {
+    font-size: 24rpx;
+}
+
+.w_670 {
+    width: 670rpx;
+}
+
+.w_560 {
+    width: 560rpx;
+}
+
+.userImg {
+    border-radius: 50%;
+    height: 96rpx;
+    width: 96rpx;
+}
+
+.content {
+    background: #fff;
+    border-radius: 20rpx;
+    padding: 0 20rpx;
+    width: 690rpx;
+}
+
+.contentImg {
+    margin: 20rpx;
+    max-height: 180rpx;
+    max-width: 180rpx;
+}
+
+.lianxibox {
+    background-color: #f7f7f7;
+    border-radius: 8rpx;
+    color: #516691;
+    font-size: 24rpx;
+    height: 44rpx;
+    padding: 0 16rpx;
+}
+
+.dianzanImg {
+    border-radius: 50%;
+    height: 60rpx;
+    margin: 5rpx;
+    width: 60rpx;
+}
+
+.dianzanImgBox {
+    border-radius: 10rpx;
+    margin-left: 100rpx;
+    padding: 5px;
+    width: 552rpx;
+}
+
+.input_null {
+    color: #c9c9c9;
+}
+
+.add-btn {
+    bottom: 120rpx;
+    height: 14vw;
+    padding: 30rpx;
+    position: fixed;
+    right: 0rpx;
+    width: 14vw;
+}
+
+.comment-input {
+    align-items: center;
+    background-color: #f7f7f7;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+.comment-tip {
+    color: #999;
+    font-size: 28rpx;
+    margin: 0 0 10rpx;
+}
+
+.release {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    font-size: 28rpx;
+    justify-content: space-between;
+    padding: 18rpx 0 18rpx 30rpx;
+}
+
+.release .text {
+    background-color: #fff;
+    border-radius: 4rpx;
+    font-size: 28rpx;
+    line-height: 34rpx;
+    max-height: 102rpx;
+    min-height: 34rpx;
+    padding: 15rpx;
+    width: calc(100vw - 160rpx);
+}
+
+.release .submit {
+    color: #fc4529;
+    height: 64rpx;
+    line-height: 64rpx;
+    text-align: center;
+    width: 130rpx;
+}
+
+.w_440 {
+    width: 440rpx;
+}

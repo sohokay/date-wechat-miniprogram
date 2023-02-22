@@ -1,0 +1,122 @@
+<view class="topBoxcontent displayFlex_column align_items">
+    <view class="shuaixuanbox1  displayFlex space_between">
+        <view class="displayFlex just_center  align_items">
+            <view bindtap="zuixin" class=" displayFlex  align_items h_90">
+                <view class="{{iszuixin?'COLOR_FB250D':'COLOR_666'}}  fonts_28">最新</view>
+            </view>
+            <view class=" displayFlex  align_items h_60 marL30">
+                <picker bindchange="bindRegionChange" mode="region">
+                    <view class="displayFlex align_items">
+                        <view class="{{region!='籍贯'?'COLOR_FB250D':'COLOR_666'}}  fonts_28">{{region}}</view>
+                        <text class="iconfont icon-xiajiantou fonts_28 {{region!='籍贯'?'COLOR_FB250D':'COLOR_CCCCCC'}}  "></text>
+                    </view>
+                </picker>
+            </view>
+            <view class=" displayFlex  align_items h_60 marL30">
+                <picker bindchange="bindRegionChange2" mode="region">
+                    <view class="displayFlex align_items">
+                        <view class="{{region2!='现居住地'?'COLOR_FB250D':'COLOR_666'}}  fonts_28">{{region2}}</view>
+                        <text class="iconfont icon-xiajiantou fonts_28 {{region2!='现居住地'?'COLOR_FB250D':'COLOR_CCCCCC'}}  "></text>
+                    </view>
+                </picker>
+            </view>
+        </view>
+        <view bindtap="chooseTap" class=" displayFlex  align_items h_60" data-tap="gd">
+            <view class="{{isgengduo?'COLOR_FB250D':'COLOR_666'}}  fonts_28">更多情况</view>
+            <text class="iconfont icon-xiajiantou fonts_24 {{isgengduo?'COLOR_FB250D':'COLOR_CCCCCC'}} "></text>
+        </view>
+    </view>
+    <view class="shaixuanModel " wx:if="{{!isshaixuan}}">
+        <view class="xingbieBox displayFlex_column" wx:if="{{isxingbie}}">
+            <view bindtap="choosesex" class="COLOR_666 fonts_28 borB_F0 h_60 displayFlex align_items" data-type="0">不限</view>
+            <view bindtap="choosesex" class="COLOR_666 fonts_28 borB_F0 h_60 displayFlex align_items" data-type="1">男</view>
+            <view bindtap="choosesex" class="COLOR_666 fonts_28 h_60 displayFlex align_items" data-type="2">女</view>
+        </view>
+        <view class="gengduoBox displayFlex_column" wx:if="{{isgengduo}}">
+            <scroll-view scrollY style="height:60vh;">
+                <view class="border">
+                    <view class="title">年龄</view>
+                    <view class="displayFlex">
+                        <view class="shurunian">
+                            <input bindinput="ageask1" class="inputClass" value="{{age1}}"></input>
+                        </view>
+                        <view>-</view>
+                        <view class="shurunian">
+                            <input bindinput="ageask2" class="inputClass" value="{{age2}}"></input>
+                        </view>
+                        <view class="fonts_28 COLOR_333">岁</view>
+                    </view>
+                </view>
+                <view class="border">
+                    <view class="title">身高</view>
+                    <view class="displayFlex">
+                        <view class="shurunian">
+                            <input bindinput="heiask1" class="inputClass" value="{{hei1}}"></input>
+                        </view>
+                        <view>-</view>
+                        <view class="shurunian">
+                            <input bindinput="heiask2" class="inputClass" value="{{hei2}}"></input>
+                        </view>
+                        <view class="fonts_28 COLOR_333">cm</view>
+                    </view>
+                </view>
+                <view class="border">
+                    <view class="title">体重</view>
+                    <view class="displayFlex">
+                        <view class="shurunian">
+                            <input bindinput="weiask1" class="inputClass" value="{{wei1}}"></input>
+                        </view>
+                        <view>-</view>
+                        <view class="shurunian">
+                            <input bindinput="weiask2" class="inputClass" value="{{wei2}}"></input>
+                        </view>
+                        <view class="fonts_28 COLOR_333">kg</view>
+                    </view>
+                </view>
+                <view class="border" wx:if="{{item.type!=3}}" wx:for="{{shaixuanlist}}" wx:key="index">
+                    <view class="title">{{item.title}}</view>
+                    <view class="biaoqian-list" wx:if="{{item.type==1||item.type==3}}">
+                        <view bindtap="changeChoose" class="biaoqian {{item2.selected==true?'selected':''}}" data-index="{{index}}" data-index2="{{index2}}" wx:for="{{item.list}}" wx:for-index="index2" wx:for-item="item2" wx:key="index2">{{item2.title}}</view>
+                    </view>
+                    <view class="biaoqian-list" wx:if="{{item.type==2}}">
+                        <view bindtap="changeChoose2" class="biaoqian {{item2.selected==true?'selected':''}}" data-index="{{index}}" data-index2="{{index2}}" wx:for="{{item.list}}" wx:for-index="index2" wx:for-item="item2" wx:key="index2">{{item2.title}}</view>
+                    </view>
+                </view>
+            </scroll-view>
+            <view class="footer-btn">
+                <view bindtap="getfenlei" class="reset-btn">重置条件</view>
+                <view bindtap="searchUser" class="sure-btn marL20">确定</view>
+            </view>
+        </view>
+    </view>
+    <view class="userListBox displayFlex_column  align_items just_center" style="margin-top: 110rpx;">
+        <view bindtap="touserInfo" class="userListc displayFlex align_items" data-id="{{item.id}}" wx:for="{{userList}}" wx:key="index">
+            <image class="userimg" mode="aspectFill" src="{{item.img_url}}"></image>
+            <view class="displayFlex_column space_between h_136">
+                <view class="displayFlex">
+                    <view class="COLOR_000 fonts_28">{{item.nickname}}</view>
+                    <image class="sexIcon marL15" src="{{item.sex==1?'../../images/nan.png':'../../images/nv.png'}} " wx:if="{{item.sex==1||item.sex==2}}"></image>
+                    <image class="shimingIcon marL15" src="../../images/sm.png" wx:if="{{item.authenticate==2}}"></image>
+                    <image class="shimingIcon marL15" mode=" aspectFit" src="{{item.vip_img}}" wx:if="{{item.vip_img}}"></image>
+                </view>
+                <view class="COLOR_666 fonts_24 displayFlex foot_W500">
+                    <view>{{item.age}}岁</view>
+                    <view class="shuxian">|</view>
+                    <view>{{item.height}}cm</view>
+                    <view class="shuxian">|</view>
+                    <view>{{item.education_name}}</view>
+                    <view class="shuxian">|</view>
+                    <view>{{item.yearly_salary_name}}</view>
+                </view>
+                <view class="COLOR_666 fonts_24 displayFlex foot_W500">
+                    <view>{{item.unit_nature_name}}</view>
+                    <view class="shuxian">|</view>
+                    <view>{{item.engaged_industry_name}}</view>
+                    <view class="shuxian">|</view>
+                    <view>{{item.marriage_history_name}}</view>
+                </view>
+            </view>
+            <view class="lianxi"> 联系TA </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,7 @@
+{
+    "navigationBarBackgroundColor": "#FB250D",
+    "navigationBarTitleText": "个人中心",
+    "navigationBarTextStyle": "white",
+    "navigationStyle": "custom",
+    "usingComponents": {}
+}

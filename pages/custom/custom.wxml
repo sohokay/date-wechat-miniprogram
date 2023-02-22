@@ -1,0 +1,1 @@
+<image bindtap="go_kefu" class="srdz" mode="widthFix" src="{{imgurl.length>0?imgurl:urls+'/public/static/index/images/dingzhifuwu.png'}}"></image>

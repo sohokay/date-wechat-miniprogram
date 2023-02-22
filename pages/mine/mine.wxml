@@ -1,0 +1,63 @@
+<image class="mineTopbg" src="../../images/mingbg.png"></image>
+<view class="nav-wrap" style="height: {{height*2+20}}px;">
+    <view class="nav-title2" style="line-height: {{height*2+44}}px;">我的</view>
+    <view style="display: flex; justify-content: space-around;flex-direction: column"></view>
+</view>
+<view class="displayFlex just_center align_items" style="margin-top: {{height*2+60}}px;">
+    <view class="displayFlex just_center align_items topBoxMine">
+        <view class="displayFlex_column just_center align_items topBoxMine2">
+            <view class="mineTopbox displayFlex_column align_items just_center" wx:if="{{isLogin}}">
+                <view class="displayFlex_column align_items just_center">
+                    <image bindtap="tobianji" class="bianji" src="../../images/bianji.png"></image>
+                    <image class="userImg" mode="aspectFill" src="{{userinfo.img_url}}"></image>
+                    <view class="displayFlex_column  space_between marT20">
+                        <view class="COLOR_333 fonts_48 fonts_bold">{{userinfo.nickname}}</view>
+                    </view>
+                </view>
+                <view bindtap="hongniang" class="hdhx marT20">获得红线</view>
+            </view>
+            <view class="mineTopbox displayFlex displayFlex_column align_items just_center" wx:else>
+                <view class="displayFlex_column align_items just_center">
+                    <image class="userImg" src="../../images/man.png"></image>
+                    <view class="displayFlex_column just_center marT20">
+                        <view class="COLOR_333 fonts_48 fonts_bold">请先登录/注册</view>
+                    </view>
+                </view>
+                <view bindtap="tologin" class="hdhx marT20">去登录/注册</view>
+            </view>
+            <view class="displayFlex_column just_center align_items marT30 ">
+                <view class="vipBox  displayWrap align_items marT20">
+                    <view class="zhanshiIconbox displayFlex_column just_center align_items">
+                        <view class=" COLOR_333 fonts_36 fonts_bold">{{userinfo.red}}</view>
+                        <view class="COLOR_999 fonts_18 marT20 foot_W500">牵线名额</view>
+                    </view>
+                    <view bindtap="tourl2" class="zhanshiIconbox displayFlex_column just_center align_items" data-item="/pages/kanguo/kanguo" style="border-right: 3rpx solid #DDDDDD; border-left: 3rpx solid #DDDDDD;">
+                        <view class=" COLOR_333 fonts_36 fonts_bold">{{userinfo.cover_visit_count}}</view>
+                        <view class="COLOR_999 fonts_18 marT20 foot_W500">看过我的</view>
+                    </view>
+                    <view bindtap="tourl2" class="zhanshiIconbox displayFlex_column just_center align_items" data-item="/pages/guanzhu/guanzhu?type=2">
+                        <view class=" COLOR_333 fonts_36 fonts_bold">{{userinfo.cover_follow_count}}</view>
+                        <view class="COLOR_999 fonts_18 marT20 foot_W500">收藏我的</view>
+                    </view>
+                </view>
+            </view>
+            <image class="gg" src="../../images/gg.png"></image>
+        </view>
+    </view>
+</view>
+<view class="displayFlex just_center align_items marT20">
+    <view class="displayWrapf mineIconfbox">
+        <view data-item="{{item}}" wx:for="{{grids}}" wx:key="index">
+            <view bindtap="tourl" class="displayFlex_column align_items just_center mineIconbox " data-item="{{item.url}}" wx:if="{{item.text!='实名认证'}}">
+                <image class="mineIcon" src="{{item.icon}}"></image>
+                <label style="color: #666666;font-size: 26rpx;">{{item.text}}</label>
+            </view>
+            <view bindtap="goSDK" class="displayFlex_column align_items just_center mineIconbox " wx:if="{{item.text=='实名认证'}}">
+                <image class="mineIcon" src="{{item.icon}}"></image>
+                <label style="color: #666666;font-size: 26rpx;">{{item.text}}</label>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="displayFlex just_center align_items" style="color: #999;font-size: 22rpx; margin-top: 30rpx; margin-bottom: 30rpx;"> Copyright ©2021 欢囍云提供云计算服务
+</view>

@@ -1,0 +1,122 @@
+<view class="displayFlex_column just_center align_items">
+    <view class="shanchuanImg chooseBox w_690 displayFlex_column">
+        <view class="COLOR_333 fonts_32">上传照片</view>
+        <view bindtap="chooseImage" class="displayFlex space_between align_items marT20">
+            <image class="adduserimg" src="{{img_url?img_url:'../../images/adduserimg.png'}}"></image>
+            <view class="COLOR_999 fonts_30">传近期美照可更引人关注哦～</view>
+        </view>
+    </view>
+    <view class="chooseBox w_690 displayFlex_column">
+        <view class="displayFlex space_between">
+            <view class="displayFlex align_items">
+                <view class="COLOR_FB250D fonts_32">*</view>
+                <view class="COLOR_333 fonts_32">牵线号WX</view>
+            </view>
+            <input bindinput="weixinjt" class="wxhIpu COLOR_333 fonts_30" placeholder="请输入您的牵线号WX" placeholderClass="fonts_30 COLOR_999"></input>
+        </view>
+        <view class=" marT20 COLOR_999 fonts_30 displayFlex_column">
+            <view>1.牵线号WX不对外显示，仅用于会员双方同意后交换联系方式</view>
+            <view>2.请输入本人正确的牵线号WX或绑定微信的手机号，以确保凭此牵线号WX或手机号可以搜索到您的微信</view>
+        </view>
+    </view>
+    <view class="chooseBox w_690 displayFlex_column">
+        <view class="displayFlex space_between">
+            <view class="displayFlex align_items">
+                <view class="COLOR_FB250D fonts_32">*</view>
+                <view class="COLOR_333 fonts_32">身高</view>
+            </view>
+            <view class="displayFlex align_items">
+                <input bindinput="shengaojt" class="wxhIpu COLOR_333 fonts_30" placeholder="请输入您的身高" placeholderClass="fonts_30 COLOR_999" type="number" value="{{height}}"></input>
+                <view class="COLOR_333 fonts_30 marL15">cm</view>
+            </view>
+        </view>
+    </view>
+    <view class="chooseBox w_690 displayFlex_column">
+        <view class="displayFlex space_between">
+            <view class="displayFlex align_items">
+                <view class="COLOR_FB250D fonts_32">*</view>
+                <view class="COLOR_333 fonts_32">体重</view>
+            </view>
+            <view class="displayFlex align_items">
+                <input bindinput="weightjt" class="wxhIpu COLOR_333 fonts_30" placeholder="请输入您的体重" placeholderClass="fonts_30 COLOR_999" type="number"></input>
+                <view class="COLOR_333 fonts_30 marL15">kg</view>
+            </view>
+        </view>
+    </view>
+    <view class="chooseBox w_690 displayFlex_column">
+        <view class="displayFlex space_between">
+            <view class="displayFlex align_items">
+                <view class="COLOR_FB250D fonts_32">*</view>
+                <view class="COLOR_333 fonts_32">生日</view>
+            </view>
+            <picker bindchange="bindBirthdayChange" mode="date" start="1949-10-01">
+                <view class="displayFlex align_items">
+                    <view class="wxhIpu {{shengri=='请选择'?'COLOR_999':''}}">{{shengri}} </view>
+                    <text class="icon-iconfontjiantou5 iconfont fonts_32 COLOR_999"></text>
+                </view>
+            </picker>
+        </view>
+    </view>
+    <view class="chooseBox w_690 displayFlex_column" wx:if="{{item.type!=3}}" wx:for="{{zstjArr}}" wx:key="index">
+        <view class="displayFlex space_between">
+            <view class="displayFlex align_items">
+                <view class="COLOR_FB250D fonts_32">*</view>
+                <view class="COLOR_333 fonts_32">{{item.title}}</view>
+            </view>
+            <view bindtap="chooseItemc" class="w_300" data-index="{{index}}">
+                <text class="icon-iconfontjiantou5 iconfont fonts_32 COLOR_999"></text>
+            </view>
+        </view>
+        <view class=" COLOR_999 fonts_30 displayWrapf">
+            <view class="marT20 marR15" wx:if="{{item2.selected==true}}" wx:for="{{item.list}}" wx:for-index="index2" wx:for-item="item2" wx:key="index2">{{item2.title}}</view>
+        </view>
+    </view>
+    <view class="chooseBox w_690 displayFlex_column">
+        <view class="displayFlex space_between">
+            <view class="displayFlex align_items">
+                <view class="COLOR_FB250D fonts_32">*</view>
+                <view class="COLOR_333 fonts_32">籍贯</view>
+            </view>
+            <picker bindchange="bindRegionChange" customItem="{{customItem}}" mode="region" value="{{region}}">
+                <view class="displayFlex align_items">
+                    <view class="wxhIpu {{region=='请选择'?'COLOR_999':''}}">{{region[0]+region[1]+region[2]}} </view>
+                    <text class="icon-iconfontjiantou5 iconfont fonts_32 COLOR_999"></text>
+                </view>
+            </picker>
+        </view>
+    </view>
+    <view class="chooseBox w_690 displayFlex_column">
+        <view class="displayFlex space_between">
+            <view class="displayFlex align_items">
+                <view class="COLOR_FB250D fonts_32">*</view>
+                <view class="COLOR_333 fonts_32">现住地区</view>
+            </view>
+            <picker bindchange="bindRegionChange2" customItem="{{customItem}}" mode="region" value="{{region2}}">
+                <view class="displayFlex align_items">
+                    <view class="wxhIpu {{region2=='请选择'?'COLOR_999':''}}">{{region2[0]+region2[1]+region2[2]}} </view>
+                    <text class="icon-iconfontjiantou5 iconfont fonts_32 COLOR_999"></text>
+                </view>
+            </picker>
+        </view>
+    </view>
+    <view class="modelBox displayFlex just_center " wx:if="{{isShowm}}">
+        <view>
+            <view class="danChooseBox displayFlex_column just_center align_items">
+                <view class="fonts_42 COLOR_FB250D">请选择{{chooseitem.title}}</view>
+                <view class="w_640 marT20" wx:if="{{chooseitem.type==1||chooseitem.type==3}}">
+                    <view bindtap="changeChoose" class="biaoqian {{item.selected==true?'selected':''}}" data-index2="{{index}}" wx:for="{{chooseitem.list}}" wx:key="index"> {{item.title}} </view>
+                </view>
+                <view class="w_640 marT20" wx:if="{{chooseitem.type==2}}">
+                    <view bindtap="changeChoose2" class="biaoqian {{item.selected==true?'selected':''}}" data-index2="{{index}}" wx:for="{{chooseitem.list}}" wx:key="index"> {{item.title}} </view>
+                </view>
+                <view class="w_640 displayFlex space_between">
+                    <view bindtap="cancle" class="quxiao">取消</view>
+                    <view bindtap="sureChoose" class="queren">确认</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view bindtap="nextUrl" class="displayFlex just_center align_items marTB30">
+        <view class="xiayibu">下一步</view>
+    </view>
+</view>

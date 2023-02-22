@@ -1,0 +1,85 @@
+<image class="faxianbg" src="../../images/faxianbg.png"></image>
+<view>
+    <view class="displayFlex space_between">
+        <view bindtap="hongniang" class="action-item">
+            <view class="top_img_box">
+                <image mode="aspectFill" src="/images/l_01.png"></image>
+            </view>
+            <view>红娘约见</view>
+        </view>
+        <view bindtap="guanliList" class="action-item" data-type="3">
+            <view class="top_img_box">
+                <image mode="aspectFill" src="/images/l_02.png"></image>
+            </view>
+            <view>线下活动</view>
+        </view>
+        <view bindtap="guanliList" class="action-item" data-type="4">
+            <view class="top_img_box">
+                <image mode="aspectFill" src="/images/l_03.png"></image>
+            </view>
+            <view>美食玩乐</view>
+        </view>
+    </view>
+</view>
+<view class="displayFlex_column just_center align_items marT40" style="position: relative;z-index: 10;">
+    <view class="displayFlex_column  contenBoxfx" wx:for="{{listInfo}}" wx:key="index">
+        <view class="displayFlex row_align_start">
+            <image bindtap="touserInfo" class="userImg" data-id="{{item.user_id}}" mode="aspectFill" src="{{item.user_img}}"></image>
+            <view class="displayFlex_column marL20 flexWrap w_560 ">
+                <view class="COLOR_516691 fonts_32">{{item.user_name}}</view>
+                <view class="COLOR_333 fonts_28 w_500 marT20">{{item.content}}</view>
+                <view class="displayWrapf" wx:if="{{item.img_list.length==1}}">
+                    <image bindtap="preview" class="contentImg" data-index="{{index}}" data-src="{{item2}}" mode="aspectFill" src="{{item2}}" wx:for="{{item.img_list}}" wx:for-index="index2" wx:for-item="item2" wx:key="index2"></image>
+                </view>
+                <view class="displayWrapf" wx:if="{{item.img_list.length==2}}">
+                    <image bindtap="preview" class="contentImg2" data-index="{{index}}" data-src="{{item2}}" mode="aspectFill" src="{{item2}}" wx:for="{{item.img_list}}" wx:for-index="index2" wx:for-item="item2" wx:key="index2"></image>
+                </view>
+                <view class="displayWrapf" wx:if="{{item.img_list.length>2}}">
+                    <image bindtap="preview" class="contentImg1" data-index="{{index}}" data-src="{{item2}}" mode="aspectFill" src="{{item2}}" wx:for="{{item.img_list}}" wx:for-index="index2" wx:for-item="item2" wx:key="index2"></image>
+                </view>
+                <view class="COLOR_333 fonts_28 w_500 marT20">{{item.update_time}}</view>
+            </view>
+        </view>
+        <view class="displayWrapf dianzanImgBox marT20" wx:if="{{item.praise_list.length>0}}">
+            <image bindtap="touserInfo" class="dianzanImg" data-id="{{item3.user_id}}" src="{{item3.user_img}}" wx:for="{{item.praise_list}}" wx:for-index="index3" wx:for-item="item3" wx:key="index3"></image>
+        </view>
+        <view class="dianzanImgBox displayFlex space_between marT10">
+            <view class="displayFlex">
+                <view bindtap="dianzan" class="displayFlex COLOR_516691 fonts_28 just_center align_items" data-dyid="{{item.id}}" data-index="{{index}}" wx:if="{{item.praise_status==1}}">
+                    <text class="iconfont fonts_42 icon-aixin1"></text>
+                    <view class="marL15">{{item.praise_list.length}}点赞</view>
+                </view>
+                <view bindtap="dianzanq" class="displayFlex COLOR_516691 fonts_28 just_center align_items" data-dyid="{{item.id}}" data-index="{{index}}" wx:if="{{item.praise_status==2}}">
+                    <text class="iconfont fonts_42 icon-aixin2 COLOR_FB250D "></text>
+                    <view class="marL15">{{item.praise_list.length}}点赞</view>
+                </view>
+                <view bindtap="huifuPinglun" class="displayFlex COLOR_516691 fonts_28 just_center align_items marL30" data-dyid="{{item.id}}" data-name="{{item.user_name}}" data-reid="">
+                    <text class="iconfont icon-pinglun"></text>
+                    <view class="marL15">{{item.reply_list.length}}评论</view>
+                </view>
+            </view>
+            <view bindtap="touserInfo" class="lianxibox COLOR_516691 fonts_28 displayFlex just_center align_items" data-id="{{item.user_id}}">
+                <text class="iconfont icon-aixin"></text>
+                <view class="marL15">联系TA</view>
+            </view>
+        </view>
+        <view class=" dianzanImgBox marT20" wx:if="{{item.reply_list.length>0}}">
+            <view class="displayFlex align_items marT10" wx:for="{{item.reply_list}}" wx:for-index="index4" wx:for-item="item4" wx:key="index4">
+                <image bindtap="touserInfo" class="dianzanImg" data-id="{{item4.user_id}}" src="{{item4.user_img}}"></image>
+                <view bindtap="huifuPinglun" class="displayFlex_column marL20 flexWrap w_440 " data-dyid="{{item4.dynamic_id}}" data-name="{{item4.user_name}}" data-reid="{{item4.user_id}}">
+                    <view class="COLOR_516691 fonts_26">{{item4.user_name}}</view>
+                    <view class="COLOR_333 fonts_26 w_500 marT10">
+                        <text class="COLOR_516691 fonts_26">{{item4.reply_user_id.length>0?'回复'+item4.reply_user_name+':':''}}</text> {{item4.content}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<image bindtap="go_add_dynamic" class="add-btn" mode="widthFit" src="/images/dynamic_add.png"></image>
+<view class="comment-input" wx:if="{{releaseFocus}}">
+    <view class="release">
+        <textarea autoHeight="true" bindinput="comment_input" bindlinechange="linechange" class="text" cursorSpacing="{{spacing}}" fixed="{{true}}" focus="{{releaseFocus}}" maxlength="300" placeholder="回复{{replyText}}：" placeholderClass="input_null" showConfirmBar="{{false}}" value="{{comment}}"></textarea>
+        <view bindtap="send_comment" class="submit">发表</view>
+    </view>
+    <view class="comment-tip">不得发布含有违法违规、低俗、侮辱、营销等内容</view>
+</view>

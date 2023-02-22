@@ -1,0 +1,20 @@
+<view class="top-wrap"></view>
+<view class="res-wrap">
+    <view style="width: 180rpx;height: 100rpx;">
+        <text class="iconfont icon-kefu-tianchong  COLOR_FC4529" style="font-size: 80rpx;"></text>
+    </view>
+    <view>
+        <view class="res-title">添加专属客服，咨询使用问题，投诉不正当会员，专属人工客服将为您服务</view>
+        <view class="res-other">线下红娘服务，私人订制服务，全方位助您脱单</view>
+    </view>
+</view>
+<view class="wechat-wrap">
+    <view class="wechat">
+        <image showMenuByLongpress="true" src="../../../images/contact_wechat.png"></image>
+        <text>微信：{{kefu.weixin}}</text>
+    </view>
+    <button bindtap="copy" class="wechat-copy">立即复制</button>
+</view>
+<view class="qrcode-wrap">
+    <image mode="widthFix" src="{{kefu.img_url}}"></image>
+</view>

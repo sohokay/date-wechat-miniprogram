@@ -1,0 +1,89 @@
+.w_690 {
+    width: 690rpx;
+}
+
+.chooseBox {
+    border-bottom: 1rpx solid #f4f4f4;
+    padding: 20rpx 0;
+}
+
+.adduserimg {
+    height: 116rpx;
+    width: 116rpx;
+}
+
+.wxhIpu {
+    text-align: right;
+    width: 300rpx;
+}
+
+.wxhIpu2 {
+    text-align: center;
+    width: 150rpx;
+}
+
+.w_300 {
+    text-align: right;
+    width: 300rpx;
+}
+
+.danChooseBox {
+    background: #fff;
+    border-radius: 20rpx;
+    margin-top: 40rpx;
+    padding: 40rpx;
+    width: 640rpx;
+}
+
+.w_640 {
+    width: 640rpx;
+}
+
+.biaoqian {
+    border: 1rpx solid #bbb;
+    border-radius: 48rpx;
+    color: #999;
+    display: inline-block;
+    font-size: 24rpx;
+    margin: 0 .5% 10rpx;
+    overflow: hidden;
+    padding: 6rpx 0;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 23.42%;
+}
+
+.biaoqian.selected {
+    border-color: #fb500d;
+    color: #fb500d;
+}
+
+.quxiao {
+    border: 1rpx solid #999;
+    border-radius: 30rpx;
+    color: #999;
+}
+
+.queren,.quxiao {
+    font-size: 28rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    text-align: center;
+    width: 260rpx;
+}
+
+.queren,.xiayibu {
+    background-color: #fb250d;
+    border: 1rpx solid #fb250d;
+    border-radius: 30rpx;
+    color: #fff;
+}
+
+.xiayibu {
+    font-size: 32rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    width: 400rpx;
+}

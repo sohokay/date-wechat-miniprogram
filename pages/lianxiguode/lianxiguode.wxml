@@ -1,0 +1,13 @@
+<view class="cell-group">
+    <view bindtap="gochat" class="cell" data-id="{{item.user_id==userId?item.inviter_user_id:item.user_id}}" wx:for="{{listInfo}}" wx:key="index">
+        <image class="cell-icon" mode="aspectFill" src="{{item.user_id==userId?item.inviter_user_img:item.user_img}}"></image>
+        <view class="cell-bd">
+            <view class="cell-text">{{item.user_id==userId?item.inviter_user_name:item.user_name}}</view>
+            <view class="cell-desc {{item.is_read==1?'COLOR_FC4529':'COLOR_3E9EF7'}}">{{item.is_read_name}}</view>
+        </view>
+        <view class="cell-ft-wrap">
+            <view class="msg-count" wx:if="{{new_sysmsg_count>0}}">{{new_sysmsg_count}}</view>
+            <view class="cell-ft"></view>
+        </view>
+    </view>
+</view>

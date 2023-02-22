@@ -1,0 +1,312 @@
+.topBoxbg {
+    background: #fb250d;
+    border-radius: 0 0 50% 50%;
+    height: 200rpx;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 750rpx;
+    z-index: 1;
+}
+
+.topBoxcontent {
+    left: 0;
+    position: relative;
+    top: 0;
+    z-index: 2;
+}
+
+.searchBox {
+    background: hsla(0,0%,97%,.36);
+    border-radius: 33rpx;
+    height: 66rpx;
+    left: 30rpx;
+    position: absolute;
+    top: 20rpx;
+    width: 690rpx;
+    z-index: 1;
+}
+
+.search {
+    height: 31rpx;
+    margin-left: 40rpx;
+    width: 28rpx;
+}
+
+.searchInp {
+    height: 30rpx;
+    width: 505rpx;
+}
+
+.searchTxt {
+    border-left: 1rpx solid #fff;
+    padding-left: 24rpx;
+}
+
+.banner_box {
+    text-align: center;
+}
+
+.banner_box,.swiper {
+    height: 518rpx;
+    width: 750rpx;
+}
+
+.swiper {
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.topTab {
+    background-color: #fff;
+    border-radius: 25rpx 25rpx 0 0;
+    padding: 20rpx;
+    position: relative;
+    top: -30rpx;
+    width: 710rpx;
+    z-index: 2;
+}
+
+.topTabImg {
+    height: 124rpx;
+    width: 124rpx;
+}
+
+.shuaixuanbox,.shuaixuanbox1 {
+    height: 60rpx;
+    width: 660rpx;
+}
+
+.shuaixuanbox1 {
+    background: #fff;
+    left: 0;
+    padding: 0 45rpx;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+}
+
+.h_60 {
+    height: 60rpx;
+}
+
+.shaixuanModel {
+    background: rgba(51,51,51,.5);
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 750rpx;
+    z-index: 3;
+}
+
+.gengduoBox,.xingbieBox {
+    background: #fff;
+    left: 0;
+    padding: 0 45rpx;
+    position: fixed;
+    top: 60rpx;
+    width: 660rpx;
+    z-index: 4;
+}
+
+.gengduoBox {
+    height: 70vh;
+}
+
+.border {
+    border-bottom: 1rpx solid #eee;
+    padding: 20rpx 0;
+}
+
+.title {
+    color: #000;
+    font-size: 28rpx;
+    font-weight: 700;
+    margin-bottom: 10rpx;
+}
+
+.shurunian {
+    text-align: center;
+}
+
+.inputClass {
+    border: 1rpx solid #333;
+    border-radius: 10rpx;
+    font-size: 28rpx;
+    height: 50rpx;
+    margin-left: 10rpx;
+    margin-right: 10rpx;
+    width: 120rpx;
+}
+
+.footer-btn {
+    border-top: 1rpx solid #eee;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20rpx 0;
+}
+
+.sure-btn {
+    background-color: #fb500d;
+}
+
+.reset-btn,.sure-btn {
+    border-radius: 36rpx;
+    color: #fff;
+    font-size: 32rpx;
+    line-height: 72rpx;
+    text-align: center;
+    width: 300rpx;
+}
+
+.reset-btn {
+    background-color: #bbb;
+}
+
+.biaoqian-list {
+    width: 100%;
+}
+
+.biaoqian {
+    border: 1rpx solid #bbb;
+    border-radius: 48rpx;
+    color: #999;
+    display: inline-block;
+    font-size: 24rpx;
+    margin: 0 .5% 10rpx;
+    overflow: hidden;
+    padding: 6rpx 0;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 23.42%;
+}
+
+.biaoqian.selected {
+    border-color: #fb500d;
+    color: #fb500d;
+}
+
+.userListBox2 {
+    background-image: linear-gradient(#fff,#f3f3f3);
+    width: 750rpx;
+}
+
+.userListBox {
+    width: 710rpx;
+}
+
+.userListc {
+    background: #fff;
+    border-radius: 20rpx;
+    box-shadow: 0rpx 5rpx 40rpx 0rpx rgba(0,0,0,.06);
+    height: 186rpx;
+    margin-bottom: 15rpx;
+    margin-top: 15rpx;
+    position: relative;
+    width: 691rpx;
+}
+
+.userimg {
+    border-radius: 20px 0 0 20rpx;
+    height: 186rpx;
+    margin-right: 20rpx;
+    width: 186rpx;
+}
+
+.h_136 {
+    height: 136rpx;
+}
+
+.sexIcon {
+    height: 30rpx;
+    width: 30rpx;
+}
+
+.shimingIcon {
+    height: 30rpx;
+    max-width: 80rpx;
+}
+
+.shuxian {
+    margin: 0 6rpx;
+}
+
+.lianxi {
+    border: 1rpx solid #fe9e93;
+    border-radius: 25rpx;
+    color: #fb250d;
+    font-size: 22rpx;
+    font-weight: 500;
+    height: 50rpx;
+    line-height: 50rpx;
+    position: absolute;
+    right: 16rpx;
+    text-align: center;
+    top: 68rpx;
+    width: 115rpx;
+}
+
+.nav-wrap {
+    color: #000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999999;
+}
+
+.nav-title {
+    bottom: 0;
+    color: #fff;
+    font-size: 36rpx;
+    font-weight: 600;
+    left: 0;
+    margin: auto;
+    max-width: 400rpx;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    text-overflow: ellipsis;
+    top: 0;
+    white-space: nowrap;
+}
+
+.nav-capsule {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    margin-left: 30rpx;
+    width: 140rpx;
+}
+
+.navbar-v-line {
+    height: 32rpx;
+    width: 1px;
+}
+
+.back-home,.back-pre {
+    height: 36rpx;
+    margin-top: 4rpx;
+    padding: 10rpx;
+    width: 32rpx;
+}
+
+.nav-capsule .back-home {
+    height: 40rpx;
+    margin-top: 3rpx;
+    width: 36rpx;
+}
+
+.wx-swiper-dots {
+    position: relative;
+    right: unset!important;
+    right: 0;
+}
+
+.wx-swiper-dots,.wx-swiper-dots-horizontal {
+    margin-bottom: 30rpx;
+}

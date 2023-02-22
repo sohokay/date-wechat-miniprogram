@@ -1,0 +1,269 @@
+<view wx:if="{{userInfo.status==2}}">
+    <swiper autoplay="true" class="swiper-wrap" duration="1000" easingFunction="easeInOutCubic" indicatorActiveColor="#fff" indicatorColor="#999" indicatorDots="true" interval="3000" wx:if="{{userImgList.length>0}}">
+        <swiper-item bindtap="showhead" wx:for="{{userImgList}}" wx:key="index">
+            <image class="swiper-image " mode="aspectFill" src="{{item.img_url}}"></image>
+            <view class="swiper-count">{{index+1}}/{{userImgList.length}}</view>
+        </swiper-item>
+    </swiper>
+    <view bindtap="fortune_action" class="fu-wrap">
+        <image src="/images/tool_zhanfu.png"></image>
+        <view>{{userInfo.sex==2?'帮她介绍':'帮他介绍'}}</view>
+    </view>
+    <view class="userListBox displayFlex_column">
+        <view class="userListc displayFlex align_userInfos">
+            <view class="displayFlex_column space_between h_160">
+                <view class="like-wrap">
+                    <image bindtap="toguanzhu" src="/images/heart_light.png" wx:if="{{!isguanzhu}}"></image>
+                    <image bindtap="deguanzhu" src="/images/heart_fill.png" wx:if="{{isguanzhu}}"></image>
+                </view>
+                <view class="displayFlex">
+                    <view class="COLOR_000 fonts_28">{{userInfo.nickname}}</view>
+                    <image class="sexIcon marL15" src="{{userInfo.sex==1?'../../images/nan.png':'../../images/nv.png'}} " wx:if="{{userInfo.sex==1||userInfo.sex==2}}"></image>
+                    <image class="shimingIcon marL15" src="../../images/sm.png" wx:if="{{userInfo.authenticate==2}}"></image>
+                    <image class="shimingIcon marL15" mode=" aspectFit" src="{{userInfo.vip_img}}" wx:if="{{userInfo.vip_img}}"></image>
+                </view>
+                <view class="COLOR_666 fonts_24 displayFlex foot_W500">
+                    <view>{{userInfo.age}}岁</view>
+                    <view class="shuxian">|</view>
+                    <view>{{userInfo.category_list.zodiac_sign_name}}</view>
+                    <view class="shuxian">|</view>
+                    <view>{{userInfo.height}}cm</view>
+                    <view class="shuxian">|</view>
+                    <view>{{userInfo.category_list.education_name}}</view>
+                    <view class="shuxian">|</view>
+                    <view>{{userInfo.category_list.yearly_salary_name}}</view>
+                </view>
+                <view class="COLOR_666 fonts_24 displayFlex foot_W500">
+                    <view>{{userInfo.category_list.unit_nature_name}}</view>
+                    <view class="shuxian">|</view>
+                    <view>{{userInfo.category_list.engaged_industry_name}}</view>
+                    <view class="shuxian">|</view>
+                    <view>{{userInfo.category_list.marriage_history_name}}</view>
+                </view>
+                <view class="COLOR_666 fonts_24 displayFlex foot_W500">
+                    <view>{{xcxname}} · 高质量相亲交友婚恋平台</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="descriptionT" wx:if="{{userInfo.description.length>0}}">“{{userInfo.description}}”</view>
+    <view class=" displayFlex_column just_center align_items marT30">
+        <view class="infoBox">
+            <view class="title">信息资料</view>
+            <view class="displayFlex space_between COLOR_333 fonts_28 paTB_10">
+                <view>编号</view>
+                <view>{{userInfo.id}}</view>
+            </view>
+            <view class="displayFlex space_between COLOR_333 fonts_28 paTB_10">
+                <view>性别</view>
+                <view>{{userInfo.sex==1?'男':'女'}}</view>
+            </view>
+            <view class="displayFlex space_between COLOR_333 fonts_28 paTB_10">
+                <view>婚史</view>
+                <view>{{userInfo.category_list.marriage_history_name}}</view>
+            </view>
+            <view class="displayFlex space_between COLOR_333 fonts_28 paTB_10">
+                <view>年龄</view>
+                <view>{{userInfo.age}}岁</view>
+            </view>
+            <view class="displayFlex space_between COLOR_333 fonts_28 paTB_10">
+                <view>出生日期</view>
+                <view>{{userInfo.birthday}}</view>
+            </view>
+            <view class="displayFlex space_between COLOR_333 fonts_28 paTB_10">
+                <view>身高</view>
+                <view>{{userInfo.height}}cm</view>
+            </view>
+            <view class="displayFlex space_between COLOR_333 fonts_28 paTB_10">
+                <view>体重</view>
+                <view>{{userInfo.weight}}kg</view>
+            </view>
+            <view class="displayFlex space_between COLOR_333 fonts_28 paTB_10">
+                <view>属相</view>
+                <view>{{userInfo.category_list.zodiac_sign_name}}</view>
+            </view>
+            <view class="displayFlex space_between COLOR_333 fonts_28 paTB_10">
+                <view>星座</view>
+                <view>{{userInfo.category_list.constellation_name}}</view>
+            </view>
+            <view class="displayFlex space_between COLOR_333 fonts_28 paTB_10">
+                <view>户籍</view>
+                <view>{{userInfo.category_list.birth_place_name}}</view>
+            </view>
+            <view class="displayFlex space_between COLOR_333 fonts_28 paTB_10">
+                <view>学历</view>
+                <view>{{userInfo.category_list.education_name}}</view>
+            </view>
+            <view class="displayFlex space_between COLOR_333 fonts_28 paTB_10">
+                <view>单位性质</view>
+                <view>{{userInfo.category_list.unit_nature_name}}</view>
+            </view>
+            <view class="displayFlex space_between COLOR_333 fonts_28 paTB_10">
+                <view>所属行业</view>
+                <view>{{userInfo.category_list.engaged_industry_name}}</view>
+            </view>
+            <view class="displayFlex space_between COLOR_333 fonts_28 paTB_10">
+                <view>年薪</view>
+                <view>{{userInfo.category_list.yearly_salary_name}}</view>
+            </view>
+            <view class="displayFlex space_between COLOR_333 fonts_28 paTB_10">
+                <view>居住地区</view>
+                <view>{{userInfo.category_list.district_name}}</view>
+            </view>
+            <view class="displayFlex space_between COLOR_333 fonts_28 paTB_10">
+                <view>喝酒情况</view>
+                <view>{{userInfo.category_list.drink_name}}</view>
+            </view>
+            <view class="displayFlex space_between COLOR_333 fonts_28 paTB_10">
+                <view>抽烟情况</view>
+                <view>{{userInfo.category_list.smoking_name}}</view>
+            </view>
+        </view>
+    </view>
+    <view class=" displayFlex_column just_center align_items marT30">
+        <view class="infoBox">
+            <view class="title">性格与兴趣</view>
+            <view class="marT20">
+                <view class="label-item" wx:if="{{personality_name.length>0}}" wx:for="{{personality_name}}" wx:key="index">{{item}}</view>
+                <view class="label-item" wx:if="{{hobby_name.length>0}}" wx:for="{{hobby_name}}" wx:key="index">{{item}}</view>
+            </view>
+        </view>
+    </view>
+    <view class=" displayFlex_column just_center align_items marT30">
+        <view class="infoBox" wx:if="{{userId>0&&authenticate==2}}">
+            <view class="title">家庭与房车</view>
+            <view class="displayFlex space_between COLOR_333 fonts_28 paTB_10">
+                <view>家庭成员</view>
+                <view style="max-width: 400rpx;">{{userInfo.category_list.family_name}}</view>
+            </view>
+            <view class="displayFlex space_between COLOR_333 fonts_28 paTB_10">
+                <view>购车情况</view>
+                <view>{{userInfo.category_list.car_purchase_name}}</view>
+            </view>
+            <view class="displayFlex space_between COLOR_333 fonts_28 paTB_10">
+                <view>购房情况</view>
+                <view>{{userInfo.category_list.house_purchase_name}}</view>
+            </view>
+        </view>
+        <view class="infoBox" wx:else>
+            <view class="title">家庭与房车</view>
+            <view bindtap="togeren" class="displayFlex align_items just_center COLOR_333 fonts_28 paTB_10" wx:if="{{authenticate==1}}">
+                <view class="COLOR_FB250D fonts_28">实名后可以查看更多 <text class="iconfont icon-iconfontjiantou5"></text>
+                    <text class="iconfont icon-iconfontjiantou5"></text>
+                </view>
+            </view>
+            <view bindtap="tologin" class="displayFlex align_items just_center COLOR_333 fonts_28 paTB_10" wx:else>
+                <view class="COLOR_FB250D fonts_28">登录后可以查看更多 <text class="iconfont icon-iconfontjiantou5"></text>
+                    <text class="iconfont icon-iconfontjiantou5"></text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class=" displayFlex_column just_center align_items  marT30">
+        <view class="infoBox" wx:if="{{userId>0&&authenticate==2}}">
+            <view class="title">择偶要求</view>
+            <view class="displayFlex space_between COLOR_333 fonts_28 paTB_10" wx:if="{{userInfo.requirement_list.post_nature_ask_name!='无要求'}}">
+                <view>岗位要求</view>
+                <view>{{userInfo.requirement_list.post_nature_ask_name}}</view>
+            </view>
+            <view class="displayFlex space_between COLOR_333 fonts_28 paTB_10" wx:if="{{userInfo.requirement_list.unit_nature_ask_name!='无要求'}}">
+                <view>单位要求</view>
+                <view>{{userInfo.requirement_list.unit_nature_ask_name}}</view>
+            </view>
+            <view class="displayFlex space_between COLOR_333 fonts_28 paTB_10" wx:if="{{userInfo.requirement_list.age_ask_list.length>0&&userInfo.requirement_list.age_ask_list[0]!=0&&userInfo.requirement_list.age_ask_list[1]!=100}}">
+                <view>年龄要求</view>
+                <view>{{userInfo.requirement_list.age_ask_list[0]}}-{{userInfo.requirement_list.age_ask_list[1]}}岁</view>
+            </view>
+            <view class="displayFlex space_between COLOR_333 fonts_28 paTB_10" wx:if="{{userInfo.requirement_list.height_ask_list.length>0&&userInfo.requirement_list.height_ask_list[0]!=100}}">
+                <view>最低身高要求</view>
+                <view>{{userInfo.requirement_list.height_ask_list[0]}}cm</view>
+            </view>
+            <view class="displayFlex space_between COLOR_333 fonts_28 paTB_10" wx:if="{{userInfo.requirement_list.weight_ask_list.length>0&&userInfo.requirement_list.weight_ask_list[0]!=0}}">
+                <view>最低体重要求</view>
+                <view>{{userInfo.requirement_list.weight_ask_list[0]}}kg</view>
+            </view>
+            <view class="displayFlex space_between COLOR_333 fonts_28 paTB_10" wx:if="{{userInfo.requirement_list.education_ask_name!='无要求'}}">
+                <view>最低学历要求</view>
+                <view>{{userInfo.requirement_list.education_ask_name}}</view>
+            </view>
+            <view class="displayFlex space_between COLOR_333 fonts_28 paTB_10" wx:if="{{userInfo.requirement_list.marriage_history_ask_name!='无要求'}}">
+                <view>婚史要求</view>
+                <view>{{userInfo.requirement_list.marriage_history_ask_name}}</view>
+            </view>
+            <view class="displayFlex space_between COLOR_333 fonts_28 paTB_10" wx:if="{{userInfo.requirement_list.appearance_ask_name!='无要求'}}">
+                <view>外貌要求</view>
+                <view>{{userInfo.requirement_list.appearance_ask_name}}</view>
+            </view>
+            <view class="displayFlex space_between COLOR_333 fonts_28 paTB_10" wx:if="{{userInfo.requirement_list.yearly_salary_ask_name!='无要求'}}">
+                <view>最低年薪要求</view>
+                <view>{{userInfo.requirement_list.yearly_salary_ask_name}}</view>
+            </view>
+            <view class="displayFlex space_between COLOR_333 fonts_28 paTB_10" wx:if="{{userInfo.requirement_list.house_purchase_ask_name!='无要求'}}">
+                <view>住房要求</view>
+                <view>{{userInfo.requirement_list.house_purchase_ask_name}}</view>
+            </view>
+            <view class="displayFlex space_between COLOR_333 fonts_28 paTB_10" wx:if="{{userInfo.requirement_list.car_purchase_ask_name!='无要求'}}">
+                <view>购车要求</view>
+                <view>{{userInfo.requirement_list.car_purchase_ask_name}}</view>
+            </view>
+            <view class="displayFlex space_between COLOR_333 fonts_28 paTB_10" wx:if="{{userInfo.requirement_list.census_register_ask_name!='无要求'}}">
+                <view>户籍要求</view>
+                <view>{{userInfo.requirement_list.census_register_ask_name}}</view>
+            </view>
+            <view class="displayFlex space_between COLOR_333 fonts_28 paTB_10" wx:if="{{userInfo.requirement_list.family_ask_name!='无要求'}}">
+                <view>家庭要求</view>
+                <view>{{userInfo.requirement_list.family_ask_name}}</view>
+            </view>
+            <view class="displayFlex space_between COLOR_333 fonts_28 paTB_10" wx:if="{{userInfo.requirement_list.personality_ask_name!='无要求'}}">
+                <view>性格要求</view>
+                <view>{{userInfo.requirement_list.personality_ask_name}}</view>
+            </view>
+            <view class="displayFlex space_between COLOR_333 fonts_28 paTB_10" wx:if="{{userInfo.requirement_list.drink_ask_name!='无要求'}}">
+                <view>是否喝酒</view>
+                <view>{{userInfo.requirement_list.drink_ask_name}}</view>
+            </view>
+            <view class="displayFlex space_between COLOR_333 fonts_28 paTB_10" wx:if="{{userInfo.requirement_list.smoking_ask_name!='无要求'}}">
+                <view>是否抽烟</view>
+                <view>{{userInfo.requirement_list.smoking_ask_name}}</view>
+            </view>
+        </view>
+        <view class="infoBox" wx:else>
+            <view class="title">择偶要求</view>
+            <view bindtap="togeren" class="displayFlex align_items just_center COLOR_333 fonts_28 paTB_10" wx:if="{{authenticate==1}}">
+                <view class="COLOR_FB250D fonts_28">实名后可以查看更多 <text class="iconfont icon-iconfontjiantou5"></text>
+                    <text class="iconfont icon-iconfontjiantou5"></text>
+                </view>
+            </view>
+            <view bindtap="tologin" class="displayFlex align_items just_center COLOR_333 fonts_28 paTB_10" wx:else>
+                <view class="COLOR_FB250D fonts_28">登录后可以查看更多 <text class="iconfont icon-iconfontjiantou5"></text>
+                    <text class="iconfont icon-iconfontjiantou5"></text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="foot-btn-bar">
+        <button bindtap="gochat" class="contact-btn">联系TA</button>
+        <view class="image-btn-list">
+            <view bindtap="go_kefu" class="image-btn">
+                <image class="btn-image" src="/images/tool_kefu.png"></image>
+                <view>客服</view>
+            </view>
+            <view bindtap="fortune_action" class="image-btn">
+                <image class="btn-image" src="/images/tool_share.png"></image>
+                <view>分享</view>
+            </view>
+            <view bindtap="totousu" class="image-btn">
+                <image class="btn-image" src="/images/tool_more.png"></image>
+                <view>投诉</view>
+            </view>
+        </view>
+    </view>
+</view>
+<view wx:if="{{userInfo.status==0||userInfo.status==1||userInfo.status==3||userInfo.status==4||userInfo.status==5}}">
+    <view class="displayFlex just_center align_items" style="width: 100vw;height: 70vh;">
+        <view style="margin-right: 20rpx;">
+            <text class="iconfont icon-buxianshi fonts_48 COLOR_333"></text>
+        </view>
+        <view class="fonts_48 fonts_bold">当前资料已关闭</view>
+    </view>
+</view>

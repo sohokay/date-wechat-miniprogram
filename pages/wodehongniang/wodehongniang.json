@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "专属红娘",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": false,
+    "navigationBarBackgroundColor": "#A91629",
+    "backgroundColor": "#A91629",
+    "usingComponents": {}
+}

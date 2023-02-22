@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "编辑相册",
+    "enablePullDownRefresh": false,
+    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#000",
+    "backgroundColor": "#000",
+    "usingComponents": {}
+}

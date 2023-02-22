@@ -1,0 +1,104 @@
+.auth {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 128rpx;
+}
+
+.auth-logo {
+    height: 200rpx;
+    width: 200rpx;
+}
+
+.auth-logo image {
+    height: 100%;
+    width: 100%;
+}
+
+.title {
+    font-size: 36rpx;
+    line-height: 56rpx;
+    margin-top: 20rpx;
+}
+
+.merchant-name {
+    display: inline;
+    font-weight: 700;
+}
+
+.sub-title {
+    font-size: 34rpx;
+    line-height: 52rpx;
+    margin-top: 8rpx;
+}
+
+.agreement {
+    color: #888;
+    display: flex;
+    font-size: 28rpx;
+    justify-content: center;
+    line-height: 40rpx;
+    margin-top: 96rpx;
+}
+
+checkbox .wx-checkbox-input {
+    border-radius: 50%;
+    height: 24rpx;
+    width: 24rpx;
+}
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+    background: #006eff;
+}
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+    background: transparent;
+    color: #fff;
+    font-size: 22rpx;
+    height: 28rpx;
+    line-height: 28rpx;
+    text-align: center;
+    width: 28rpx;
+}
+
+navigator {
+    color: #006dff;
+    display: inline;
+}
+
+.button-area {
+    margin-top: 48rpx;
+}
+
+button {
+    background: #fff;
+    border: 2rpx solid #ddd;
+    font-size: 32rpx;
+    font-weight: 400!important;
+    height: 96rpx!important;
+    line-height: 64rpx!important;
+    width: 622rpx!important;
+}
+
+.redirect {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 272rpx;
+}
+
+.loading {
+    height: 160rpx;
+    margin-bottom: 32rpx;
+    width: 160rpx;
+}
+
+.loading image {
+    height: 100%;
+    width: 100%;
+}
+
+.title {
+    font-size: 34rpx;
+    line-height: 52rpx;
+}

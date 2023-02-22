@@ -1,0 +1,49 @@
+<view class="top-wrap {{type==1?'COLOR_ee5e78':type==2?'COLOR_7f51ec':type==3?'COLOR_fe9a13':'COLOR_5a93ff'}}"></view>
+<view class="res-wrap">
+    <view style="width: 180rpx;height: 180rpx;">
+        <image src=" {{type==1?'../../images/icon3.png':type==2?'../../images/icon4.png':type==3?'/images/l_02.png':'/images/l_03.png'}}" style="width: 160rpx;height: 160rpx; margin-right: 20rpx;"></image>
+    </view>
+    <view wx:if="{{type==1}}">
+        <view class="res-title">脱单合集</view>
+        <view class="res-title">线上牵线｜线下约见</view>
+        <view class="res-title">本地真实靠谱的相亲平台</view>
+        <view class="res-title">成功帮助单身男女脱单10000+</view>
+    </view>
+    <view wx:if="{{type==2}}">
+        <view class="res-title">结婚合集</view>
+        <view class="res-title">线上主动牵线｜线下一对一约见面</view>
+        <view class="res-title">各种主题相亲会｜直播间连麦</view>
+    </view>
+    <view wx:if="{{type==3}}">
+        <view class="res-title">活动合集</view>
+        <view class="res-title">每个月都有线下活动，大家选自己想参加的主题活动，找小红娘报名，真实高效，面对面交友</view>
+    </view>
+    <view wx:if="{{type==4}}">
+        <view class="res-title">美食玩乐合集</view>
+        <view class="res-title">分享约会好去处➕美食好吃的，帮助大家更快脱单</view>
+    </view>
+</view>
+<view class="displayFlex_column just_center align_items " style="margin-top: 140rpx;">
+    <view class="displayFlex_column w_670 borT_F0 padTB30" wx:for="{{listInfo}}" wx:key="index">
+        <view class="displayFlex row_align_start">
+            <image class="userImg" mode="aspectFill" src="{{item.head_img_url}}"></image>
+            <view class="displayFlex_column marL20 flexWrap w_560 ">
+                <view class="COLOR_516691 fonts_32">{{item.type_name}}</view>
+                <view class="COLOR_333 fonts_28 w_500 marT20">{{item.content}}</view>
+                <view class="displayWrapf" wx:if="{{item.img_list.length==1}}">
+                    <image bindtap="preview" class="contentImg" data-index="{{index}}" data-src="{{item2}}" mode="aspectFill" src="{{item2}}" wx:for="{{item.img_list}}" wx:for-index="index2" wx:for-item="item2" wx:key="index2"></image>
+                </view>
+                <view class="displayWrapf" wx:if="{{item.img_list.length==2}}">
+                    <image bindtap="preview" class="contentImg2" data-index="{{index}}" data-src="{{item2}}" mode="aspectFill" src="{{item2}}" wx:for="{{item.img_list}}" wx:for-index="index2" wx:for-item="item2" wx:key="index2"></image>
+                </view>
+                <view class="displayWrapf" wx:if="{{item.img_list.length>2}}">
+                    <image bindtap="preview" class="contentImg1" data-index="{{index}}" data-src="{{item2}}" mode="aspectFill" src="{{item2}}" wx:for="{{item.img_list}}" wx:for-index="index2" wx:for-item="item2" wx:key="index2"></image>
+                </view>
+                <view class="COLOR_333 fonts_28 w_500 marT20">{{item.update_time}}</view>
+            </view>
+        </view>
+        <view class="displayWrapf dianzanImgBox" wx:if="{{item.praise_list.length>0}}">
+            <image class="dianzanImg" src="{{item3.user_img}}" wx:for="{{item.praise_list}}" wx:for-index="index3" wx:for-item="item3" wx:key="index3"></image>
+        </view>
+    </view>
+</view>

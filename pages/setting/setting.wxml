@@ -1,0 +1,13 @@
+<view class="list-wrap" style="margin-top:10rpx;">
+    <view bindtap="torich" class="list-item footer" data-type="2">
+        <view>
+            <view class="title">服务协议与隐私条款</view>
+        </view>
+    </view>
+    <view bindtap="torich" class="list-item footer" data-type="1">
+        <view class="title">关于我们</view>
+    </view>
+</view>
+<view class="list-wrap" style="margin-top:10rpx;">
+    <button bindtap="logout" plain="true">退出登录</button>
+</view>

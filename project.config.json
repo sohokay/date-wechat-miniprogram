@@ -1,0 +1,50 @@
+{
+    "description": "项目配置文件",
+    "packOptions": {
+        "ignore": [],
+        "include": []
+    },
+    "setting": {
+        "bundle": false,
+        "userConfirmedBundleSwitch": false,
+        "urlCheck": true,
+        "scopeDataCheck": false,
+        "coverView": true,
+        "es6": true,
+        "postcss": true,
+        "compileHotReLoad": false,
+        "lazyloadPlaceholderEnable": false,
+        "preloadBackgroundData": false,
+        "minified": true,
+        "autoAudits": false,
+        "newFeature": false,
+        "uglifyFileName": false,
+        "uploadWithSourceMap": true,
+        "useIsolateContext": true,
+        "nodeModules": false,
+        "enhance": true,
+        "useMultiFrameRuntime": false,
+        "useApiHook": false,
+        "useApiHostProcess": false,
+        "showShadowRootInWxmlPanel": true,
+        "packNpmManually": false,
+        "enableEngineNative": false,
+        "packNpmRelationList": [],
+        "minifyWXSS": true,
+        "showES6CompileOption": false,
+        "babelSetting": {
+            "ignore": [],
+            "disablePlugins": [],
+            "outputPath": ""
+        }
+    },
+    "compileType": "miniprogram",
+    "libVersion": "2.19.5",
+    "appid": "wx0581dfc4269f9d0b",
+    "projectname": "wx152a8989dc18d6d1",
+    "condition": {},
+    "editorSetting": {
+        "tabIndent": "insertSpaces",
+        "tabSize": 4
+    }
+}

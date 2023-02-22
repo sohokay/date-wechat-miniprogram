@@ -1,0 +1,68 @@
+.share-image {
+    border: 1px solid #000;
+    height: 1067rpx;
+    margin: 5% 75rpx 0;
+    width: 600rpx;
+}
+
+.savebtn {
+    background-color: #ab1b25;
+    color: #fff;
+    margin: 20rpx 40rpx;
+}
+
+.zpopup {
+    background-color: rgba(0,0,0,.5);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+}
+
+.zpopup .wrap {
+    background-color: #fff;
+    border-radius: 10rpx;
+    margin: 30vh auto;
+    width: 80vw;
+}
+
+.zpopup .wrap .title {
+    color: #000;
+    font-size: 32rpx;
+    padding: 40rpx;
+    text-align: center;
+}
+
+.zpopup .wrap .message {
+    color: #888;
+    font-size: 28rpx;
+    padding: 20rpx 40rpx;
+}
+
+.zpopup .wrap .bgroup {
+    border: 1rpx solid #d4d4d4;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    justify-content: space-around;
+    margin-top: 40rpx;
+    width: 100%;
+}
+
+.zpopup .wrap .bgroup button {
+    border: 0;
+    border-radius: 0;
+    height: 96rpx;
+    line-height: 96rpx;
+    width: 100%;
+}
+
+.zpopup .wrap .bgroup button:last-child {
+    border-left: 1rpx solid #d4d4d4;
+}
+
+.description {
+    color: #999;
+    font-size: 26rpx;
+    padding: 0 40rpx;
+}

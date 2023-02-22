@@ -1,0 +1,3 @@
+<image mode="aspectFit" src="{{logo}}" style="width:90%;margin:5%"></image>
+<view catchtap="register" class="login-btn">点击授权注册</view>
+<view class="" style="color:#888888;width:100%;text-align:center;font-size:24rpx;margin-top:20rpx">已阅读并同意《 <view bindtap="go_protocol" style=" display:inline;color:#FA260C;">服务与隐私协议</view>》</view>

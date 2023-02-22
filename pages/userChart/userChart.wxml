@@ -1,0 +1,103 @@
+<view class="displayFlex_column just_center align_items">
+    <view class="toptips marT30"> {{xcxname}}是一个半开放的本地陌生人交友相亲平台，请注意文明相亲交友，不违公序良俗。 </view>
+    <view class="toptips marT30">请谨慎沟通，若收到借款、投资、索要礼物等行为，请马上 <text bindtap="totousu" style="color:red">投诉举报</text>，谨防诈骗，平台求证后会做永久封号处理。 </view>
+    <view wx:if="{{isuncharts}}" wx:for="{{chartsList.reply_list}}" wx:key="index">
+        <view class="displayFlex row_align_end just_end  w_670 marT30" wx:if="{{item.user_id==userId||item.inviter_user_id==userId}}">
+            <image class="userimg"></image>
+            <view class="zhongContent3 displayFlex_column" style="background-color: #FB250D;">
+                <view class="COLOR_FFF fonts_30  displayFlex  align_items paTB_10" style="padding: 20rpx 0;">{{item.content}}</view>
+            </view>
+            <image class="userimg" src="{{item.inviter_user_name.length>0?item.inviter_user_img:item.user_img}}"></image>
+        </view>
+        <view class="displayFlex row_align_start just_start w_670 marT30" wx:else>
+            <image bindtap="touserInfo" class="userimg" src="{{item.inviter_user_name.length>0?item.inviter_user_img:item.user_img}}"></image>
+            <view class="zhongContent displayFlex_column" wx:if="{{chartsList.status==1}}">
+                <view class="COLOR_333 fonts_30  displayFlex  align_items paTB_10" style="padding: 20rpx 0;">{{item.content}}</view>
+                <view class="COLOR_333 fonts_24   " style="padding: 20rpx 0;">您是否同意与该用户交换联系方式？</view>
+                <picker bindchange="bindaccept" class="marT10" range="{{accept_words}}" value="{{accept_index}}" wx:if="{{quehui==2}}">
+                    <view class="displayFlex space_between just_center align_items">
+                        <view class="fonts_24 COLOR_333 xuanzebox"> {{accept_words[accept_index]}} </view>
+                        <text class="iconfont icon-xiajiantou fonts_24 COLOR_333"></text>
+                    </view>
+                </picker>
+                <picker bindchange="bindreject" class="marT10" range="{{reject_words}}" value="{{reject_index}}" wx:if="{{quehui==3}}">
+                    <view class="displayFlex space_between just_center align_items">
+                        <view class="fonts_24 COLOR_333 xuanzebox"> {{reject_words[reject_index]}} </view>
+                        <text class="iconfont icon-xiajiantou fonts_24 COLOR_333"></text>
+                    </view>
+                </picker>
+                <view class="displayFlex space_between align_items borT_F0 marT30" style="padding: 20rpx 0;" wx:if="{{quehui==1}}">
+                    <view bindtap="quehui" class="COLOR_FB250D fonts_24 w_50" data-type="2">同意</view>
+                    <view bindtap="quehui" class="COLOR_333 fonts_24 w_50" data-type="3">拒绝</view>
+                </view>
+                <view class="displayFlex space_between align_items borT_F0 marT30" style="padding: 20rpx 0;" wx:else>
+                    <view bindtap="tongyiqianxian" class="COLOR_FB250D fonts_24 w_50">回复</view>
+                    <view bindtap="quehui" class="COLOR_333 fonts_24 w_50" data-type="1">返回</view>
+                </view>
+            </view>
+            <view class="zhongContent3 displayFlex_column" wx:else>
+                <view class="COLOR_333 fonts_30  displayFlex  align_items paTB_10" style="padding: 20rpx 0;">{{item.content}}</view>
+            </view>
+            <image class="userimg"></image>
+        </view>
+    </view>
+    <view class="displayFlex row_align_start space_between w_670 marT30" wx:if="{{chartsList.status==2}}">
+        <image class="userimg"></image>
+        <view class="zhongContent  displayWrapf align_items" style="background-color: #FB250D;">
+            <view class="COLOR_FFF fonts_30  displayFlex  align_items paTB_10" style="padding: 20rpx 0;">我的微信号：{{chartsList.user_id==userId?chartsList.user_weixin:chartsList.inviter_user_weixin}}</view>
+            <button bindtap="copy" class="wechat-copy" data-weixin="{{chartsList.user_id==userId?chartsList.user_weixin:chartsList.inviter_user_weixin}}">复制</button>
+        </view>
+        <image class="userimg" src="{{chartsList.user_id==userId?chartsList.user_img:chartsList.inviter_user_img}}"></image>
+    </view>
+    <view class="displayFlex row_align_start space_between w_670 marT30" wx:if="{{chartsList.status==2}}">
+        <image bindtap="touserInfo" class="userimg" src="{{chartsList.user_id==userId?chartsList.inviter_user_img:chartsList.user_img}}"></image>
+        <view class="zhongContent displayWrapf align_items">
+            <view class="COLOR_333 fonts_30  displayFlex  align_items paTB_10" style="padding: 20rpx 0;">我的微信号：{{chartsList.user_id==userId?chartsList.inviter_user_weixin:chartsList.user_weixin}}</view>
+            <button bindtap="copy" class="wechat-copy2" data-weixin="{{chartsList.user_id==userId?chartsList.inviter_user_weixin:chartsList.user_weixin}}">复制</button>
+        </view>
+        <image class="userimg"></image>
+    </view>
+    <view class=" marT30 COLOR_999" style="text-align: center;" wx:if="{{chartsList.status==1}}">牵线剩余时间倒计时： <text style="color:red">{{qianxiantime}}</text>
+    </view>
+    <view class="zhongContent2 marT30  fonts_24 COLOR_333" wx:if="{{chartsList.status==1&&userId==chartsList.user_id}}"> 你已申请联系Ta，请耐心等待Ta回应。(24小时内若没有回应，红线将退回) </view>
+    <view class="zhongContent2 marT30  fonts_24 COLOR_333" wx:if="{{chartsList.status==1&&userId!=chartsList.user_id}}"> 请在24小时内及时处理申请。如果同意，你们将互相交换微信号；如果拒绝，30天内对方将无法再次联系你。 </view>
+    <view class="zhongContent2 marT30  fonts_24 COLOR_333" wx:if="{{chartsList.status==3&&userId==chartsList.user_id}}"> TA不接受您的申请，红线已退回。请试试联系其他人吧 </view>
+    <view class="zhongContent2 marT30  fonts_24 COLOR_333" wx:if="{{chartsList.status==3&&userId!=chartsList.user_id}}"> 您已拒绝与该用户牵线 </view>
+    <view class="zhongContent2 marT30  fonts_24 COLOR_333" wx:if="{{chartsList.status==4&&userId==chartsList.user_id}}"> 当前牵线已超时，请重新牵线 </view>
+    <view class="zhongContent2 marT30  fonts_24 COLOR_333" wx:if="{{chartsList.status==4&&userId!=chartsList.user_id}}"> 当前牵线已超时，请重新牵线 </view>
+    <view class="displayFlex row_align_start space_between w_670 marT30" wx:if="{{!isuncharts||chartsList.status==3||chartsList.status==4}}">
+        <image class="userimg" src=""></image>
+        <view class="zhongContent displayFlex_column" wx:if="{{!quecharts}}">
+            <view class="COLOR_333 fonts_30  displayFlex just_center align_items paTB_10" style="padding: 20rpx 0;">需要帮你联系{{name}}吗？</view>
+            <view class="COLOR_CCCCCC fonts_24  borT_F0 " style="padding: 20rpx 0;">温馨提示：</view>
+            <view class="fonts_24 COLOR_333 xuanzebox"> 申请对方联系方式将消耗一条红线 </view>
+            <view class="displayFlex space_between align_items borT_F0 marT30" style="padding: 20rpx 0;">
+                <view bindtap="toquecharts" class="COLOR_FB250D fonts_24 w_50">是的</view>
+                <view bindtap="toback" class="COLOR_333 fonts_24 w_50">不了</view>
+            </view>
+        </view>
+        <view class="zhongContent displayFlex_column" wx:if="{{quecharts}}">
+            <view class="COLOR_333 fonts_30  displayFlex just_center align_items paTB_10" style="padding: 20rpx 0;">有什么想对Ta说的吗？</view>
+            <view class="COLOR_CCCCCC fonts_24  borT_F0 " style="padding: 20rpx 0;">选择或者自己写一句话吧</view>
+            <picker bindchange="bindapply" class="marT10" range="{{apply_words}}" value="{{apply_index}}">
+                <view class="displayFlex space_between just_center align_items">
+                    <view class="fonts_24 COLOR_333 xuanzebox"> {{apply_words[apply_index]}} </view>
+                    <text class="iconfont icon-xiajiantou fonts_24 COLOR_333"></text>
+                </view>
+            </picker>
+            <view class="displayFlex space_between align_items borT_F0 marT30" style="padding: 20rpx 0;">
+                <view bindtap="fasonghongxian" class="COLOR_FB250D fonts_24 w_50">好了</view>
+                <view bindtap="toback" class="COLOR_333 fonts_24 w_50">没有</view>
+            </view>
+        </view>
+        <image class="userimg" src=""></image>
+    </view>
+    <view class="zhongContent2  fonts_24 COLOR_333 marTB30" wx:if="{{chartsList.status==2}}">
+        <view style="color:red">有两点小红娘需要提醒你下</view>
+        <view>恭喜你们牵线成功,可以互加微信啦~</view>
+        <view>1.但凡在与对方聊天过程中，涉及到索取红包，或者提及钱财方面的信息，你可以先停止与对方的沟通，并及时截图给我，向我反映情况避免对你造成金钱上的损失。</view>
+        <view>2.需要洁身自爱，在未真正结婚前，我们强烈建议不要发生任何与身体接触有关的行为，要对自己负责，保护自己！如若发生任何肢体接触关系，平台无法为你负任何责任。</view>
+        <view>两个人牵线成功，双方真诚了解接触认识认识，最好可以约个饭，见个面哈</view>
+        <view>最最最后实在无意向继续了解，也请说清楚哈，没有缘分成为恋人，那就认识的一个朋友哈</view>
+    </view>
+</view>

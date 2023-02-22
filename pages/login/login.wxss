@@ -1,0 +1,135 @@
+button::after {
+    border-width: 0;
+}
+
+.item-row {
+    border-bottom: 1rpx solid #eee;
+    justify-content: space-between;
+    margin: 10%;
+    padding: 10rpx;
+    width: 80%;
+}
+
+.item-inner-row,.item-row {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.item-inner-row {
+    justify-content: flex-start;
+}
+
+.item-row image {
+    height: 56rpx;
+    width: 56rpx;
+}
+
+.item-row input {
+    color: #2e2e2e;
+    font-size: 28rpx;
+    margin-left: 10rpx;
+}
+
+.item-row .code-btn,.item-row .zhanwei {
+    height: 56rpx;
+    width: 180rpx;
+}
+
+.item-row .code-btn {
+    background: #fc4529;
+    background: -moz-linear-gradient(top,#ff95cc,#fc4529);
+    background: -webkit-gradient(linear,0 0,0 bottom,from(#ff95cc),to(#fc4529));
+    background: -o-linear-gradient(top,#ff95cc,#fc4529);
+    border-radius: 8rpx;
+    color: #fff;
+    font-size: 22rpx;
+    line-height: 56rpx;
+    margin: 0;
+    padding: 2rpx 20rpx;
+    text-align: center;
+}
+
+.code-btn.disabled {
+    background-color: #888!important;
+    background: #ddd!important;
+    color: #fff!important;
+}
+
+.input-placeholder {
+    color: #888;
+    font-size: 28rpx;
+}
+
+.rigister-btn {
+    background-color: #fff;
+    color: #fc4529;
+    float: right;
+    font-size: 28rpx;
+    font-weight: 400;
+    line-height: 40rpx;
+    margin-right: 10%;
+    margin-top: 34rpx;
+    padding: 0;
+    text-align: center;
+}
+
+.wrap {
+    padding: 9% 9% 0;
+}
+
+.login-btn {
+    background: #fc4529;
+    border-radius: 42rpx;
+    color: #fff;
+    height: 84rpx;
+    line-height: 84rpx;
+    margin: 0 auto!important;
+    padding: 0!important;
+    width: 88%!important;
+}
+
+.account-img {
+    border-radius: 16rpx;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.label {
+    color: #333;
+    font-size: 32rpx;
+    font-weight: 500;
+    line-height: 44rpx;
+    margin-bottom: 120rpx;
+    margin-top: 60rpx;
+    text-align: center;
+}
+
+.phone-login-btn {
+    color: #888;
+    line-height: 48rpx;
+    margin-bottom: 30rpx;
+}
+
+.cancel-btn,.phone-login-btn {
+    background-color: #fff;
+    float: left;
+    font-size: 28rpx;
+    margin-left: 10%;
+    padding: 0;
+    text-align: center;
+}
+
+.cancel-btn {
+    color: #999990;
+    font-weight: 400;
+    line-height: 40rpx;
+    margin-top: 34rpx;
+}
+
+.footbox {
+    bottom: 80rpx;
+    position: fixed;
+    width: 740rpx;
+}

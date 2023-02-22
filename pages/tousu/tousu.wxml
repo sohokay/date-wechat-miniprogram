@@ -1,0 +1,21 @@
+<form bindsubmit="formSubmit" reportSubmit="true">
+    <view class="displayFlex_column just_center align_items">
+        <view class="marT20 COLOR_333 fonts_30 w_665">投诉内容·</view>
+        <input class="inputwoyao" name="content" placeholder="请填写投诉内容" placeholderClass="COLOR_999 fonts_24" type="text"></input>
+        <view class="marT20 COLOR_333 fonts_30 w_665">图片证据·</view>
+        <view class="row_align_start displayWrapf w_665 marT30">
+            <view class="imgwrap" wx:for="{{imglist}}" wx:key="index">
+                <image class="imgitem" src="{{item}}"></image>
+                <image bindtap="deleteimg" class="iconclose" data-index="{{index}}" src="/images/close.png"></image>
+            </view>
+            <view bindtap="addimg" class="imgwrap" wx:if="{{imglist.length<9}}">
+                <image class="imgitem" src="/images/addimg.png"></image>
+            </view>
+        </view>
+        <view class="marT20 COLOR_999 fonts_24 w_665">小提示：必须上传真实有效的证据截图，如：透露微信/诈骗/侮辱等</view>
+        <view class="marT20 COLOR_999 fonts_24 w_665">小提示：不得发布含有违法违规、低俗、侮辱、营销等内容</view>
+        <view class=" w_665 displayFlex just_center align_items">
+            <button class="fabuBut" formType="submit"> 确认投诉 </button>
+        </view>
+    </view>
+</form>

@@ -1,0 +1,89 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/faxian/faxian",
+        "pages/custom/custom",
+        "pages/message/message",
+        "pages/login/login",
+        "pages/mine/mine",
+        "pages/register/register",
+        "pages/register/register-first",
+        "pages/register/register-second",
+        "pages/register/register-third",
+        "pages/register/register-forth",
+        "pages/bianji/bianji",
+        "pages/bianji/bianjiindex/bianjiindex",
+        "pages/bianji/bianjipic/bianjipic",
+        "pages/userList/userList",
+        "pages/userdetail/userdetail",
+        "pages/userChart/userChart",
+        "mp_ecard_sdk/index/index",
+        "mp_ecard_sdk/protocol/service/index",
+        "mp_ecard_sdk/protocol/privacy/index",
+        "mp_ecard_sdk/protocol/userAccredit/index",
+        "mp_ecard_sdk/protocol/eid/index",
+        "pages/shiming/shiming",
+        "pages/guanliList/guanliList",
+        "pages/wodehongniang/wodehongniang",
+        "pages/fabudongtai/fabudongtai",
+        "pages/guanzhu/guanzhu",
+        "pages/lxkefu/lxkefu",
+        "pages/vip/vip",
+        "pages/kanguo/kanguo",
+        "pages/tousu/tousu",
+        "pages/wodedongtai/wodedongtai",
+        "pages/setting/setting",
+        "pages/gongzhonghao/gongzhonghao",
+        "pages/mianfeihongxian/mianfeihongxian",
+        "pages/richTxt/richTxt",
+        "pages/xitongxiaoxi/xitongxiaoxi",
+        "pages/lianxiguode/lianxiguode",
+        "pages/mytongzhi/mytongzhi",
+        "pages/node/node"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "丁小叔单身俱乐部",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "color": "#3E3E3E",
+        "selectedColor": "#FC4529",
+        "backgroundColor": "#FFFFFF",
+        "borderStyle": "black",
+        "position": "bottom",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "会员",
+                "iconPath": "images/evaluate.png",
+                "selectedIconPath": "images/evaluate_fill.png"
+            },
+            {
+                "pagePath": "pages/faxian/faxian",
+                "text": "欢囍圈",
+                "iconPath": "images/faxian.png",
+                "selectedIconPath": "images/faxian_fill.png"
+            },
+            {
+                "pagePath": "pages/custom/custom",
+                "text": "私人订制",
+                "iconPath": "images/tailor.png",
+                "selectedIconPath": "images/tailor_fill.png"
+            },
+            {
+                "pagePath": "pages/message/message",
+                "text": "消息",
+                "iconPath": "images/message.png",
+                "selectedIconPath": "images/message_fill.png"
+            },
+            {
+                "pagePath": "pages/mine/mine",
+                "text": "我的",
+                "iconPath": "images/people.png",
+                "selectedIconPath": "images/people_fill.png"
+            }
+        ]
+    }
+}

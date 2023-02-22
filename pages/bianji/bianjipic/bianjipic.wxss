@@ -1,0 +1,57 @@
+.contentBox {
+    background: #fff;
+    border-radius: 10rpx;
+    padding: 0 25rpx;
+    width: 700rpx;
+}
+
+.imgwrap {
+    position: relative;
+}
+
+.imgitem {
+    background-color: #f4f4f4;
+    height: 200rpx;
+    margin: 15rpx;
+    width: 200rpx;
+}
+
+.zhuangtai {
+    color: #fff;
+    font-size: 26rpx;
+}
+
+.zhuangtai,.zhuangtai2 {
+    background: rgba(0,0,0,.4);
+    height: 200rpx;
+    left: 15rpx;
+    line-height: 200rpx;
+    position: absolute;
+    text-align: center;
+    top: 15rpx;
+    width: 200rpx;
+}
+
+.iconclose {
+    height: 40rpx;
+    position: absolute;
+    right: 0rpx;
+    top: -5rpx;
+    width: 40rpx;
+    z-index: 4;
+}
+
+.COLOR_0B0B0B {
+    color: #0b0b0b;
+}
+
+.sztx {
+    background-color: #fb500d;
+    border-radius: 20rpx;
+    color: #fff;
+    font-size: 26rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    text-align: center;
+    width: 120rpx;
+}

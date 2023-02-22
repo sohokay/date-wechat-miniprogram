@@ -1,0 +1,39 @@
+<view style="background-color: #f6f6f6;">
+    <view class="vip-wrap">
+        <view class="card-wrap card-wrap-img">
+            <view class="vip-discount vip-discount-bg">{{vipInfo.data.text_top}}</view>
+            <view class="vip-price vip-price-bg">{{vipInfo.data.bottom_text}}</view>
+            <view class="z-row-start displayFlex align_items" style="padding:32rpx 32rpx;">
+                <image class="userImg" mode="aspectFill" src="{{userinfo.img_url}}"></image>
+                <view class="z-column-center" style="margin-left:20rpx;">
+                    <view class="card-uid">{{userinfo.nickname}}</view>
+                    <view class="card-vip">{{userinfo.vip_title?userinfo.vip_expire_time+' 到期':'尚未加入会员'}}</view>
+                </view>
+            </view>
+            <view style="font-size:32rpx;font-weight:400;color:#fff;margin-left:30rpx;">{{vipInfo.data.middle_text}}</view>
+            <view class="vipbtn-wrap">
+                <view bindtap="go_buy" class="buy-btn" plain="true">咨询红娘</view>
+            </view>
+        </view>
+    </view>
+    <view style="padding:30rpx;">
+        <view style="font-size:32rpx;color:#333;font-weight:500;">VIP会员专属特权</view>
+        <view class="vip-content displayWrapf">
+            <view style="width: 33%;" wx:if="{{item.used}}" wx:for="{{vipInfo.data.content}}" wx:key="index">
+                <view bindtap="show_popup" class="vip-content-item" data-index="{{index}}">
+                    <image src="{{'/images/'+item.icon}}"></image>
+                    <view class="content-text">{{item.text}} <image src="/images/ic_help.png"></image>
+                    </view>
+                    <view class="content-current" wx:if="{{userinfo.is_vip&&item.current>=0}}">剩 <text style="font-size:26rpx;">{{item.current}}</text> 次</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="vip-popup" wx:if="{{popup.show}}">
+    <view class="vip-popup-wrap">
+        <view class="title">{{popup.title}}</view>
+        <view class="content">{{popup.content}}</view>
+        <view bindtap="cancel_popup" class="cancel-btn">我知道了</view>
+    </view>
+</view>

@@ -1,0 +1,7 @@
+{
+    "enablePullDownRefresh": false,
+    "navigationBarBackgroundColor": "#e94a5a",
+    "navigationBarTitleText": "私人订制",
+    "usingComponents": {},
+    "navigationStyle": "custom"
+}

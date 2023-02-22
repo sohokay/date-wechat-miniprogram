@@ -1,0 +1,17 @@
+<view class="wrap">
+    <image class="account-img" mode="aspectFit" src="{{logo}}"></image>
+</view>
+<view class="label">未注册会员请先注册</view>
+<view bindtap="phoneLogin" class="phone-login-btn" wx:if="{{phone_login}}">手机登录</view>
+<button bindgetphonenumber="getPhoneNumber" class="login-btn" disabled="{{yuedu}}" openType="getPhoneNumber">
+    <view bindtap="isyuedu">一键登录</view>
+</button>
+<view bindtap="cancel" class="cancel-btn">取消登录</view>
+<view class="footbox displayFlex just_center align_items">
+    <view class="marR15">
+        <text bindtap="querenyuedu" class="iconfont fonts_40 {{yuedu?'icon-choose':'icon-xianshi_xuanze COLOR_FC4529'}} "></text>
+    </view>
+    <text class="fonts_24">我已经阅读并同意</text>
+    <text bindtap="torich" class="COLOR_3E9EF7 fonts_24" data-type="2">《用户协议》《隐私政策》</text>
+    <text bindtap="torich" class="COLOR_3E9EF7 fonts_24" data-type="3">《单身承诺书》</text>
+</view>

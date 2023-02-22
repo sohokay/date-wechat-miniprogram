@@ -1,0 +1,92 @@
+button::after {
+    border-width: 0;
+}
+
+page {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.item-row {
+    border-bottom: 1rpx solid #eee;
+    justify-content: space-between;
+    margin: 10%;
+    padding: 10rpx;
+    width: 80%;
+}
+
+.item-inner-row,.item-row {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.item-inner-row {
+    justify-content: flex-start;
+}
+
+.item-row image {
+    height: 64rpx;
+    width: 64rpx;
+}
+
+.item-row input {
+    color: #2e2e2e;
+    font-size: 28rpx;
+    margin-left: 10rpx;
+}
+
+.item-row .code-btn,.item-row .zhanwei {
+    height: 56rpx;
+    width: 180rpx;
+}
+
+.item-row .code-btn {
+    background: #fc4529;
+    background: -moz-linear-gradient(top,#ff95cc,#fc4529);
+    background: -webkit-gradient(linear,0 0,0 bottom,from(#ff95cc),to(#fc4529));
+    background: -o-linear-gradient(top,#ff95cc,#fc4529);
+    border-radius: 8rpx;
+    color: #fff;
+    font-size: 22rpx;
+    line-height: 56rpx;
+    margin: 0;
+    padding: 2rpx 20rpx;
+    text-align: center;
+}
+
+.code-btn.disabled {
+    background-color: #888!important;
+    background: #ddd!important;
+    color: #fff!important;
+}
+
+.input-placeholder {
+    color: #888;
+    font-size: 28rpx;
+}
+
+.login-btn {
+    background: linear-gradient(-90deg,#fa240c,#fb5b0d);
+    border-radius: 44rpx;
+    box-shadow: 0rpx 8rpx 16rpx 0rpx rgba(250,37,12,.25);
+    color: #fff;
+    font-size: 30rpx;
+    font-weight: 500;
+    height: 88rpx;
+    line-height: 88rpx;
+    text-align: center;
+    width: 640rpx;
+}
+
+.rigister-btn {
+    background-color: #fff;
+    color: #2e2e2e;
+    float: right;
+    font-size: 28rpx;
+    line-height: 48rpx;
+    margin: 0 5%;
+    padding: 0;
+    width: 15%;
+}

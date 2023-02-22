@@ -1,0 +1,32 @@
+<view class="topBoxcontent displayFlex_column align_items">
+    <view class="userListBox displayFlex_column just_center align_items">
+        <view bindtap="touserInfo" class="userListc displayFlex align_items" data-id="{{item.user_id}}" wx:for="{{userList}}" wx:key="index">
+            <image class="userimg" mode="aspectFill" src="{{item.user_details.img_url}}"></image>
+            <view class="displayFlex_column space_between h_136">
+                <view class="displayFlex">
+                    <view class="COLOR_000 fonts_28">{{item.user_details.nickname}}</view>
+                    <image class="sexIcon marL15" src="{{item.user_details.sex==1?'../../images/nan.png':'../../images/nv.png'}} " wx:if="{{item.user_details.sex==1||item.user_details.sex==2}}"></image>
+                    <image class="shimingIcon marL15" src="../../images/sm.png" wx:if="{{item.user_details.authenticate==2}}"></image>
+                    <image class="shimingIcon marL15" mode=" aspectFit" src="{{item.user_details.vip_img}}" wx:if="{{item.user_details.vip_img}}"></image>
+                </view>
+                <view class="COLOR_666 fonts_24 displayFlex foot_W500">
+                    <view>{{item.user_details.age}}岁</view>
+                    <view class="shuxian">|</view>
+                    <view>{{item.user_details.height}}cm</view>
+                    <view class="shuxian">|</view>
+                    <view>{{item.user_category_details.education_name}}</view>
+                    <view class="shuxian">|</view>
+                    <view>{{item.user_category_details.yearly_salary_name}}</view>
+                </view>
+                <view class="COLOR_666 fonts_24 displayFlex foot_W500">
+                    <view>{{item.user_category_details.unit_nature_name}}</view>
+                    <view class="shuxian">|</view>
+                    <view>{{item.user_category_details.engaged_industry_name}}</view>
+                    <view class="shuxian">|</view>
+                    <view>{{item.user_category_details.marriage_history_name}}</view>
+                </view>
+            </view>
+            <view class="lianxi"> 联系TA </view>
+        </view>
+    </view>
+</view>

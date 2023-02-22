@@ -1,0 +1,14 @@
+<image class="share-image" mode="aspectFill" src="{{shareImage}}"></image>
+<canvasdrawer bind:getImage="eventGetImage" class="canvasdrawer" painting="{{painting}}"></canvasdrawer>
+<button bind:tap="eventSave" class="savebtn">保存海报推荐</button>
+<view class="description" wx:if="{{type!=1}}">您的朋友扫一扫此海报二维码，待Ta注册通过后，您和Ta都将获得一条红线</view>
+<cover-view class="zpopup" wx:if="{{ispowerdialog}}">
+    <cover-view class="wrap">
+        <cover-view class="title">授权确认</cover-view>
+        <cover-view class="message">需要您授权保存图片到相册</cover-view>
+        <cover-view class="bgroup">
+            <button bindtap="cancelOpenDialog" plain="true">取消</button>
+            <button bindopensetting="cancelOpenDialog" openType="openSetting" plain="true">去授权</button>
+        </cover-view>
+    </cover-view>
+</cover-view>

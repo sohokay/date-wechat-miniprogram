@@ -1,0 +1,15 @@
+<view class="contentBox marT20 displayFlex_column">
+    <view class="row_align_start displayWrapf ">
+        <view class="imgwrap" wx:for="{{imglist}}" wx:key="index">
+            <image class="imgitem" src="{{item.img_url}}"></image>
+            <view class="zhuangtai   {{item.status==1?'COLOR_FFF':'COLOR_EF493E'}}" wx:if="{{item.status==1||item.status==3}}">{{item.status_name}}</view>
+            <view class="zhuangtai2 displayFlex just_center align_items" wx:if="{{item.status==2&&item.img!=imgid}}">
+                <view bindtap="shezhi" class="sztx" data-id="{{item.id}}">设为头像</view>
+            </view>
+            <image bindtap="deleteimg" class="iconclose" data-id="{{item.id}}" src="/images/J.jpg"></image>
+        </view>
+        <view bindtap="addimg" class="imgwrap" wx:if="{{imglist.length<9}}">
+            <image class="imgitem" src="/images/add.png"></image>
+        </view>
+    </view>
+</view>

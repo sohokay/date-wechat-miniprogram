@@ -1,0 +1,15 @@
+<view class="topic">
+    <view class="section-wrap">
+        <text class="iconfont COLOR_FC4529 fonts_28 icon-biaotizhishi"></text>
+        <view class="section"> 你与Ta的距离可能只是相差一个公众号，每日推送优质男女会员。 </view>
+    </view>
+    <view class="section-wrap">
+        <text class="iconfont COLOR_FC4529 fonts_28 icon-biaotizhishi"></text>
+        <view class="section"> 往期推荐会员，发现更多小程序上没有的会员资料，(ˇ?ˇ) 想～多了解Ta就来这里看看。 </view>
+    </view>
+    <view class="section-wrap">
+        <text class="iconfont COLOR_FC4529 fonts_28 icon-biaotizhishi"></text>
+        <view class="section"> 报名上头条，展现最美好的自己，吸引更多的异性，脱单就是要自信，你本来就很优秀。 </view>
+    </view>
+</view>
+<button bindcontact="handleContact" openType="contact" sendMessageImg="" sendMessageTitle="关注公众号" sessionFrom="offical" showMessageCard="true">+点击关注</button>

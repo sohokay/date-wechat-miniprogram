@@ -1,0 +1,587 @@
+@font-face {
+    font-family: iconfont;
+    src: url("//at.alicdn.com/t/font_2703971_qyeuvp71gee.woff2?t=1636682697309") format("woff2"),url("//at.alicdn.com/t/font_2703971_qyeuvp71gee.woff?t=1636682697309") format("woff"),url("//at.alicdn.com/t/font_2703971_qyeuvp71gee.ttf?t=1636682697309") format("truetype");
+}
+
+.iconfont {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: iconfont!important;
+    font-style: normal;
+}
+
+.icon-buxianshi:before {
+    content: "\e618";
+}
+
+.icon-choose:before {
+    content: "\e614";
+}
+
+.icon-xianshi_xuanze:before {
+    content: "\e625";
+}
+
+.icon-biaotizhishi:before {
+    content: "\e608";
+}
+
+.icon-kefu-tianchong:before {
+    content: "\e620";
+}
+
+.icon-handoup:before {
+    content: "\e627";
+}
+
+.icon-aixin1:before {
+    content: "\e61a";
+}
+
+.icon-aixin2:before {
+    content: "\e65c";
+}
+
+.icon-pinglun:before {
+    content: "\e628";
+}
+
+.icon-aixin:before {
+    content: "\eca1";
+}
+
+.icon-dianzan:before {
+    content: "\e60c";
+}
+
+.icon-iconfontjiantou5:before {
+    content: "\e635";
+}
+
+.icon-xiajiantou:before {
+    content: "\e615";
+}
+
+.img {
+    height: 100%;
+    width: 100%;
+}
+
+.height {
+    height: 200rpx;
+}
+
+button::after {
+    border: none;
+}
+
+.flex-row,.row-between {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.row-between {
+    justify-content: space-between;
+}
+
+.limittext {
+    -webkit-line-clamp: 1;
+}
+
+.limittext,.limittext2 {
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.limittext2 {
+    -webkit-line-clamp: 2;
+}
+
+.test::after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 0;
+}
+
+.just_end {
+    justify-content: flex-end;
+}
+
+.just_start {
+    justify-content: flex-start;
+}
+
+.marR15 {
+    margin-right: 15rpx;
+}
+
+.modelBox {
+    background: rgba(51,51,51,.5);
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 100;
+}
+
+.COLOR_FB250D {
+    color: #fb250d;
+}
+
+.COLOR_516691 {
+    color: #516691;
+}
+
+.COLOR_FC4529 {
+    color: #fc4529;
+}
+
+.container {
+    align-items: center;
+    box-sizing: border-box;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    padding: 200rpx 0;
+}
+
+.container,.displayFlex {
+    display: flex;
+}
+
+.displayFlex {
+    flex-direction: row;
+}
+
+.displayFlexReverse {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.displayFlex_column {
+    display: flex;
+    flex-direction: column;
+}
+
+.align_items {
+    align-items: center;
+}
+
+.space_between {
+    justify-content: space-between;
+}
+
+.just_center {
+    justify-content: center;
+}
+
+.row_align_end {
+    align-items: flex-end;
+}
+
+.row_align_center {
+    align-items: center;
+}
+
+.flexWrap {
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.row_align_start {
+    align-items: flex-start;
+}
+
+.displayWrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.displayWrap,.displayWrapf,.flex_wrap {
+    flex-wrap: wrap;
+}
+
+.displayWrapf {
+    display: flex;
+    flex-direction: row;
+}
+
+.displayNone {
+    display: none;
+}
+
+.marT40 {
+    margin-top: 40rpx;
+}
+
+.marT20 {
+    margin-top: 20rpx;
+}
+
+.marL30 {
+    margin-left: 30rpx;
+}
+
+.marL15 {
+    margin-left: 15rpx;
+}
+
+.marL20 {
+    margin-left: 20rpx;
+}
+
+.padT40 {
+    padding-top: 40rpx;
+}
+
+.padlf20 {
+    padding-left: 20rpx;
+    padding-right: 20rpx;
+}
+
+.padlf30 {
+    padding-left: 30rpx;
+    padding-right: 30rpx;
+}
+
+.marTB30 {
+    margin-bottom: 30rpx;
+    margin-top: 30rpx;
+}
+
+.padTB30 {
+    padding-bottom: 30rpx;
+    padding-top: 30rpx;
+}
+
+.marT30 {
+    margin-top: 30rpx;
+}
+
+.marT60 {
+    margin-top: 60rpx;
+}
+
+.marT10 {
+    margin-top: 10rpx;
+}
+
+.width_690 {
+    width: 690rpx;
+}
+
+.line20 {
+    background: #f0f0f0;
+    height: 20rpx;
+    width: 100%;
+}
+
+.text_line {
+    text-decoration: line-through;
+}
+
+.text_underline {
+    text-decoration: underline;
+}
+
+.back_fff {
+    background-color: #fff;
+}
+
+.back_f5 {
+    background-color: #f5f5f5;
+}
+
+.COLOR_333 {
+    color: #333;
+}
+
+.COLOR_9A {
+    color: #9a9a9a;
+}
+
+.COLOR_666 {
+    color: #666;
+}
+
+.COLOR_FFF {
+    color: #fff;
+}
+
+.COLOR_0184E0 {
+    color: #0184e0;
+}
+
+.COLOR_42 {
+    color: #424242;
+}
+
+.COLOR_A5 {
+    color: #a5a5a5;
+}
+
+.COLOR_FE5241 {
+    color: #fe5241;
+}
+
+.COLOR_999 {
+    color: #999;
+}
+
+.COLOR_B3 {
+    color: #b3b3b3;
+}
+
+.COLOR_2B {
+    color: #2b2b2b;
+}
+
+.COLOR_2C {
+    color: #2c2c2c;
+}
+
+.COLOR_7A {
+    color: #7a7a7a;
+}
+
+.COLOR_1A {
+    color: #1a1a1a;
+}
+
+.COLOR_FF3333 {
+    color: #f33;
+}
+
+.COLOR_06 {
+    color: #060606;
+}
+
+.COLOR_CCCCCC {
+    color: #ccc;
+}
+
+.COLOR_FF0000 {
+    color: red;
+}
+
+.COLOR_F7B551 {
+    color: #f7b551;
+}
+
+.COLOR_EF493E {
+    color: #ef493e;
+}
+
+.COLOR_888 {
+    color: #888;
+}
+
+.COLOR_8C8C8C {
+    color: #8c8c8c;
+}
+
+.COLOR_E22319 {
+    color: #e22319;
+}
+
+.COLOR_000 {
+    color: #000;
+}
+
+.COLOR_FD2424 {
+    color: #fd2424;
+}
+
+.COLOR_2E71E4 {
+    color: #2e71e4;
+}
+
+.COLOR_367AEE {
+    color: #367aee;
+}
+
+.COLOR_297AED {
+    color: #297aed;
+}
+
+.COLOR_3E9EF7 {
+    color: #3e9ef7;
+}
+
+.COLOR_E2EBF1 {
+    color: #e2ebf1;
+}
+
+.COLOR_37FEF7 {
+    color: #37fef7;
+}
+
+.COLOR_26E3FF {
+    color: #26e3ff;
+}
+
+.COLOR_27CAFF {
+    color: #27caff;
+}
+
+.COLOR_F3FFFF {
+    color: #f3ffff;
+}
+
+.COLOR_25E3FF {
+    color: #25e3ff;
+}
+
+.COLOR_D2E0E2 {
+    color: #d2e0e2;
+}
+
+.borB_F0 {
+    border-bottom: 1rpx solid #f0f0f0;
+}
+
+.borT_F0 {
+    border-top: 1rpx solid #f0f0f0;
+}
+
+.foot_W400 {
+    font-weight: 400;
+}
+
+.foot_W500 {
+    font-weight: 500;
+}
+
+.foot_W600 {
+    font-weight: 600;
+}
+
+.fonts_14 {
+    font-size: 14rpx;
+}
+
+.fonts_16 {
+    font-size: 16rpx;
+}
+
+.fonts_18 {
+    font-size: 18rpx;
+}
+
+.fonts_22 {
+    font-size: 22rpx;
+}
+
+.fonts_24 {
+    font-size: 24rpx;
+}
+
+.fonts_26 {
+    font-size: 26rpx;
+}
+
+.fonts_28 {
+    font-size: 28rpx;
+}
+
+.fonts_30 {
+    font-size: 30rpx;
+}
+
+.fonts_32 {
+    font-size: 32rpx;
+}
+
+.fonts_34 {
+    font-size: 34rpx;
+}
+
+.fonts_36 {
+    font-size: 36rpx;
+}
+
+.fonts_42 {
+    font-size: 42rpx;
+}
+
+.fonts_46 {
+    font-size: 46rpx;
+}
+
+.fonts_48 {
+    font-size: 48rpx;
+}
+
+.fonts_52 {
+    font-size: 52rpx;
+}
+
+.fonts_60 {
+    font-size: 60rpx;
+}
+
+.fonts_bold {
+    font-weight: 700;
+}
+
+.citypickers {
+    background-color: red;
+    height: 100%;
+    min-height: 100%;
+    position: fixed;
+    width: 100%;
+}
+
+.citypicker {
+    z-index: 3;
+}
+
+.citybody,.citypage {
+    background: #fff;
+}
+
+.citybody {
+    bottom: 0;
+    position: fixed;
+    z-index: 3;
+}
+
+.cityheader {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 4;
+}
+
+.city-cancel {
+    color: #818181;
+    float: left;
+    margin: 20rpx;
+}
+
+.city-true {
+    color: #2fb42e;
+    float: right;
+    margin: 20rpx;
+}
+
+.section .picker {
+    background-color: #fff;
+    border-bottom: 1px solid #d9d9d9;
+    border-top: 1px solid #d9d9d9;
+    padding: 20rpx;
+}
+
+.txt_over {
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    display: -webkit-box;
+    overflow: hidden;
+    width: 300rpx;
+}

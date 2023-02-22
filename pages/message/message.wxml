@@ -1,0 +1,50 @@
+<view class="cell-group">
+    <button class="cell" openType="openSetting" plain="true">
+        <image class="cell-icon" src="/images/ic_message.png"></image>
+        <view class="cell-bd">
+            <view class="cell-text">消息订阅</view>
+            <view class="cell-desc">关闭后将错过不少机会</view>
+        </view>
+        <view class="cell-ft"></view>
+    </button>
+    <view bindtap="go_friends" class="cell">
+        <image class="cell-icon" src="/images/ic_friend.png"></image>
+        <view class="cell-bd">
+            <view class="cell-text">联系过的人</view>
+            <view class="cell-desc">去看看哪些人联系过了</view>
+        </view>
+        <view class="cell-ft"></view>
+    </view>
+    <view bindtap="go_system_msg" class="cell">
+        <image class="cell-icon" src="/images/ic_xitong.png"></image>
+        <view class="cell-bd">
+            <view class="cell-text">系统消息</view>
+            <view class="cell-desc">查看官方消息</view>
+        </view>
+        <view class="cell-ft-wrap">
+            <view class="cell-ft"></view>
+        </view>
+    </view>
+    <view bindtap="go_my_msg" class="cell">
+        <image class="cell-icon" src="/images/ic_tongzhi.png"></image>
+        <view class="cell-bd">
+            <view class="cell-text">我的通知</view>
+            <view class="cell-desc">查看我的通知</view>
+        </view>
+        <view class="cell-ft-wrap">
+            <view class="msg-count" wx:if="{{new_sysmsg_count>0}}">{{new_sysmsg_count}}</view>
+            <view class="cell-ft"></view>
+        </view>
+    </view>
+    <view bindtap="gochat" class="cell" data-id="{{item.user_id==userId?item.inviter_user_id:item.user_id}}" data-name="{{item.user_id==userId?item.inviter_user_name:item.user_name}}" wx:for="{{listInfo}}" wx:key="index">
+        <image class="cell-icon" mode="aspectFill" src="{{item.user_id==userId?item.inviter_user_img:item.user_img}}"></image>
+        <view class="cell-bd">
+            <view class="cell-text">{{item.user_id==userId?item.inviter_user_name:item.user_name}}</view>
+            <view class="cell-desc {{item.is_read==1?'COLOR_FC4529':'COLOR_3E9EF7'}}">{{item.is_read_name}}</view>
+        </view>
+        <view class="cell-ft-wrap">
+            <view class="msg-count" wx:if="{{item.user_id!=userId&&item.is_read==1}}">1</view>
+            <view class="cell-ft"></view>
+        </view>
+    </view>
+</view>

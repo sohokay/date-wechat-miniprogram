@@ -1,0 +1,81 @@
+page {
+    background: #f4f4f4;
+}
+
+.w_670 {
+    width: 670rpx;
+}
+
+.toptips {
+    background: #aeaeae;
+    border-radius: 10rpx;
+    color: #fff;
+    font-size: 24rpx;
+    padding: 20rpx;
+    width: 640rpx;
+}
+
+.userimg {
+    height: 80rpx;
+    width: 80rpx;
+}
+
+.zhongContent {
+    width: 430rpx;
+}
+
+.zhongContent,.zhongContent3 {
+    background: #fff;
+    border-radius: 10rpx;
+    margin: 0 20rpx;
+    padding: 0 20rpx;
+}
+
+.zhongContent3 {
+    max-width: 430rpx;
+}
+
+.zhongContent2 {
+    background: #fff;
+    border-radius: 10rpx;
+    line-height: 40rpx;
+    padding: 30rpx 20rpx;
+    width: 640rpx;
+}
+
+.xuanzebox {
+    border: 1rpx solid #f4f4f4;
+    height: 50rpx;
+    line-height: 50rpx;
+    width: 400rpx;
+}
+
+.w_50 {
+    text-align: center;
+    width: 50%;
+}
+
+.wechat-copy {
+    background-color: #fff!important;
+    border: 1rpx solid #fff;
+    border-radius: 32rpx;
+    color: #fb250d;
+}
+
+.wechat-copy,.wechat-copy2 {
+    font-size: 24rpx;
+    height: 48rpx;
+    line-height: 48rpx!important;
+    margin: 10rpx!important;
+    padding: 0 10rpx;
+    text-align: center;
+    vertical-align: middle;
+    width: 100rpx!important;
+}
+
+.wechat-copy2 {
+    background-color: #fb250d!important;
+    border: 1rpx solid #fb250d;
+    border-radius: 32rpx;
+    color: #fff;
+}

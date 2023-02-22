@@ -1,0 +1,56 @@
+<view style="background:#f6f6f6;padding: 0 0 30rpx 0">
+    <view class="avatar-wrap">
+        <view class="black-bg"></view>
+        <image bindtap="tobianjiPic" class="adduserimg" src="{{bianjiinfo.img_url?bianjiinfo.img_url:'../../images/man.png'}}"></image>
+        <view bindtap="tobianjiPic" class="des" style="color:#333;">点击上传形象照</view>
+        <view class="des">确保个人形象照片为本人清晰正脸照，一张良好的形象照更能吸引到别人哦</view>
+    </view>
+    <view class="block-wrap">
+        <view class="title-wrap">
+            <view class="title">内心独白</view>
+            <view bindtap="tobianji" class="foot" data-type="0">去编辑</view>
+        </view>
+        <view class="info-label-list" wx:if="{{bianjiinfo.description.length>0}}">
+            <view class="haven-edit">{{bianjiinfo.description}}</view>
+        </view>
+        <view class="not-edit" wx:else>还未编辑哦~</view>
+    </view>
+    <view class="block-wrap">
+        <view class="title-wrap">
+            <view class="title">基本资料</view>
+            <view bindtap="tobianji" class="foot" data-type="1">去完善</view>
+        </view>
+        <view class="info-label-list">
+            <view class="label-item" wx:if="{{item!=''}}" wx:for="{{bianjiinfo.data_list[1]}}" wx:key="index"> {{item}} </view>
+        </view>
+    </view>
+    <view class="block-wrap">
+        <view class="title-wrap">
+            <view class="title">工作经济家庭</view>
+            <view bindtap="tobianji" class="foot" data-type="2">去完善</view>
+        </view>
+        <view class="info-label-list">
+            <view class="label-item" wx:if="{{item!=''}}" wx:for="{{bianjiinfo.data_list[2]}}" wx:key="index"> {{item}} </view>
+        </view>
+    </view>
+    <view class="block-wrap">
+        <view class="title-wrap">
+            <view class="title">性格爱好</view>
+            <view bindtap="tobianji" class="foot" data-type="4">去完善</view>
+        </view>
+        <view class="info-label-list" wx:if="{{bianjiinfo.data_list[3].length>0}}">
+            <view class="label-item" wx:if="{{item!='无要求'&&item!=''}}" wx:for="{{bianjiinfo.data_list[3]}}" wx:key="index"> {{item}} </view>
+        </view>
+        <view class="not-edit" wx:else>还未完善哦~</view>
+    </view>
+    <view class="block-wrap">
+        <view class="title-wrap">
+            <view class="title">择偶要求</view>
+            <view bindtap="tobianji" class="foot" data-type="5">去选择</view>
+        </view>
+        <view class="info-label-list" wx:if="{{bianjiinfo.data_list[4].length>0}}">
+            <view class="label-item" wx:if="{{item!='无要求'&&item!=''}}" wx:for="{{bianjiinfo.data_list[4]}}" wx:key="index"> {{item}} </view>
+        </view>
+        <view class="not-edit" wx:else>还未完善哦~</view>
+    </view>
+</view>

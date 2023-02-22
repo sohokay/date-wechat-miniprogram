@@ -1,0 +1,92 @@
+page {
+    background-color: #f4f4f4;
+}
+
+.topic {
+    padding: 15rpx;
+}
+
+.section-wrap {
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10rpx;
+}
+
+.section-icon {
+    max-height: 48rpx;
+    max-width: 48rpx;
+    min-height: 48rpx;
+    min-width: 48rpx;
+}
+
+.section {
+    color: #333;
+    font-size: 28rpx;
+    line-height: 42rpx;
+    padding: 20rpx;
+}
+
+.topimg {
+    margin: 10rpx 15rpx 0;
+}
+
+.logo-wrap,.topimg {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.logo-wrap {
+    padding: 15rpx;
+}
+
+.logo {
+    height: 45vw;
+    width: 45vw;
+}
+
+.return-btn {
+    background: #fc4529;
+    background: -moz-linear-gradient(top,#ff95cc,#fc4529);
+    background: -webkit-gradient(linear,0 0,0 bottom,from(#ff95cc),to(#fc4529));
+    background: -o-linear-gradient(top,#ff95cc,#fc4529);
+    color: #fff;
+    margin: 30rpx 15rpx 0 30rpx;
+}
+
+.offical-wrap {
+    align-items: center;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    height: 96rpx;
+    justify-content: space-between;
+    margin: 10rpx 15rpx;
+}
+
+.offical-wrap image {
+    height: 96rpx;
+    width: 96rpx;
+}
+
+button {
+    background-color: #fc4529;
+    color: #fff;
+    font-size: 32rpx;
+    font-weight: 700;
+    height: 96rpx!important;
+    line-height: 96rpx!important;
+    margin: 10rpx 15rpx!important;
+    padding: 0!important;
+    width: auto!important;
+}
+
+.example {
+    padding: 15rpx;
+    width: calc(100% - 30rpx);
+}

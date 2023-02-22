@@ -1,0 +1,6 @@
+<view class="displayFlex_column just_center align_items marT20">
+    <view class="displayFlex_column content borT_F0 marT20" wx:for="{{listInfo}}" wx:key="index">
+        <view class="borB_F0 fonts_32 COLOR_333 fonts_bold padTB30">{{item.title}}</view>
+        <view class="fonts_28 COLOR_999 padTB30">{{item.content}}</view>
+    </view>
+</view>
